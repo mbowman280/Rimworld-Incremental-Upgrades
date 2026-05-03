@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Incremental Upgrades</name>
-  <author>MarkB</author>
-  <packageId>MarkB.IncrementalUpgrades</packageId>
+  <author>TemperXL</author>
+  <packageId>TemperXL.IncrementalUpgrades</packageId>
   <description>Adds research-gated Mark I, II, and III upgrade tiers across a wide range of vanilla items. All upgrades are new items — originals remain buildable and are not replaced.
 
 WEAPONS
