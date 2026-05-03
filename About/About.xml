@@ -24,6 +24,7 @@ BIONICS
 Nine bionic implants gain three upgrade tiers each with improved stat bonuses.
 
 All upgrades are gated behind a dedicated research tab (Incremental Upgrades) with tiered Industrial and Spacer prerequisites.</description>
+  <url>https://github.com/mbowman280/Rimworld-Incremental-Upgrades</url>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
