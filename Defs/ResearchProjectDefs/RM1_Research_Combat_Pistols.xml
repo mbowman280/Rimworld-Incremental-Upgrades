@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ===== Autopistol ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_Autopistol_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>autopistol upgrade I</label>
+    <description>Refined tolerances and improved feed mechanisms push the autopistol beyond factory spec.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>BlowbackOperation</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_Autopistol_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>autopistol upgrade II</label>
+    <description>Precision-machined components and advanced alloys extract further performance from the autopistol platform.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>RM1_Autopistol_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>3.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_Autopistol_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>autopistol upgrade III</label>
+    <description>The pinnacle of autopistol engineering. Near-perfect ballistics and sub-millimeter machining achieve limits once thought impossible.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_Autopistol_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>4.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== Machine Pistol ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_MachinePistol_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>machine pistol upgrade I</label>
+    <description>Optimised gas ports and tighter chambers increase the machine pistol's effective performance.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>BlowbackOperation</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_MachinePistol_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>machine pistol upgrade II</label>
+    <description>Advanced materials and a redesigned bolt group reduce cycle time and improve hit probability.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>RM1_MachinePistol_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>3.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_MachinePistol_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>machine pistol upgrade III</label>
+    <description>The apex of compact automatic weapons. Advanced fabrication techniques push the machine pistol into near-spacer performance territory.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_MachinePistol_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>4.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

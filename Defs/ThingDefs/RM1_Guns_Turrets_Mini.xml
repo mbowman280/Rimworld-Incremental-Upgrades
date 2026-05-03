@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseWeaponTurret" Name="RM1_MiniTurretGun_Base" Abstract="True">
+    <defName>RM1_MiniTurretGun_Base</defName>
+    <label>mini-turret gun</label>
+    <description>An upgraded mini-turret weapon assembly designed to attach to a turret.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMini_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <AccuracyTouch>0.77</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.24</AccuracyLong>
+      <RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_MiniTurretGun_Base">
+    <defName>RM1_Gun_MiniTurret_Mark_I</defName><label>mini-turret gun (Mark I)</label>
+    <statBases><AccuracyShort>0.81</AccuracyShort><AccuracyMedium>0.65</AccuracyMedium><AccuracyLong>0.42</AccuracyLong></statBases>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>RM1_Bullet_MiniTurret_Mark_I</defaultProjectile><warmupTime>0</warmupTime><range>29.9</range><burstShotCount>4</burstShotCount><ticksBetweenBurstShots>9</ticksBetweenBurstShots><defaultCooldownTime>1.80</defaultCooldownTime><soundCast>GunShotA</soundCast><soundCastTail>GunTail_Light</soundCastTail><muzzleFlashScale>9</muzzleFlashScale><consumeFuelPerShot>1</consumeFuelPerShot></li></verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_MiniTurretGun_Base">
+    <defName>RM1_Gun_MiniTurret_Mark_II</defName><label>mini-turret gun (Mark II)</label>
+    <statBases><AccuracyShort>0.95</AccuracyShort><AccuracyMedium>0.95</AccuracyMedium><AccuracyLong>0.62</AccuracyLong></statBases>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>RM1_Bullet_MiniTurret_Mark_II</defaultProjectile><warmupTime>0</warmupTime><range>62.0</range><burstShotCount>8</burstShotCount><ticksBetweenBurstShots>5</ticksBetweenBurstShots><defaultCooldownTime>1.17</defaultCooldownTime><soundCast>GunShotA</soundCast><soundCastTail>GunTail_Light</soundCastTail><muzzleFlashScale>9</muzzleFlashScale><consumeFuelPerShot>1</consumeFuelPerShot></li></verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_MiniTurretGun_Base">
+    <defName>RM1_Gun_MiniTurret_Mark_III</defName><label>mini-turret gun (Mark III)</label>
+    <statBases><AccuracyShort>0.95</AccuracyShort><AccuracyMedium>0.95</AccuracyMedium><AccuracyLong>0.95</AccuracyLong></statBases>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>RM1_Bullet_MiniTurret_Mark_III</defaultProjectile><warmupTime>0</warmupTime><range>154.3</range><burstShotCount>13</burstShotCount><ticksBetweenBurstShots>5</ticksBetweenBurstShots><defaultCooldownTime>0.68</defaultCooldownTime><soundCast>GunShotA</soundCast><soundCastTail>GunTail_Light</soundCastTail><muzzleFlashScale>9</muzzleFlashScale><consumeFuelPerShot>1</consumeFuelPerShot></li></verbs>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>RM1_Battery_T2_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>improved battery</label>
+    <description>Denser electrode materials and improved charge cycling allow batteries to store significantly more energy.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Batteries</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>0.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_Battery_T4_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>spacer battery</label>
+    <description>Exotic matter crystalline cells push energy density far beyond what standard electrochemistry permits.</description>
+    <baseCost>1350</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_Battery_T2_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_Battery_T6_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>peak battery</label>
+    <description>Zero-loss superconducting cell architecture with near-perfect charge retention represents the pinnacle of known energy storage.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_Battery_T4_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+</Defs>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ===== Chain Shotgun ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_ChainShotgun_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>chain shotgun upgrade I</label>
+    <description>Improved choke geometry and a redesigned cycling mechanism increase the chain shotgun's stopping power and reliability.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>GasOperation</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>4.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_ChainShotgun_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>chain shotgun upgrade II</label>
+    <description>New polymer-coated shot and a reinforced receiver push the chain shotgun's terminal performance significantly higher.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>RM1_ChainShotgun_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>5.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_ChainShotgun_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>chain shotgun upgrade III</label>
+    <description>Advanced fabrication techniques produce a chain shotgun operating at the absolute limits of conventional propellant technology.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_ChainShotgun_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>6.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== Heavy SMG ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_HeavySMG_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>heavy SMG upgrade I</label>
+    <description>A tighter barrel profile and polished feed ramp improve the heavy SMG's accuracy and rate of fire.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>GasOperation</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>4.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_HeavySMG_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>heavy SMG upgrade II</label>
+    <description>Advanced alloy components and a revised gas regulator significantly extend effective range and damage output.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>RM1_HeavySMG_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>5.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_HeavySMG_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>heavy SMG upgrade III</label>
+    <description>Near-spacer manufacturing tolerances applied to the heavy SMG platform create an instrument of devastating close-range firepower.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_HeavySMG_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>6.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== LMG ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_LMG_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>LMG upgrade I</label>
+    <description>Improved ammunition feed and a lighter bolt carrier group enhance the LMG's sustained accuracy.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>GasOperation</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>4.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_LMG_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>LMG upgrade II</label>
+    <description>A chrome-lined barrel and precision-balanced rotating bolt dramatically improve accuracy and heat dissipation under sustained fire.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>RM1_LMG_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>5.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_LMG_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>LMG upgrade III</label>
+    <description>Advanced fabrication produces an LMG with virtually frictionless internals, delivering exceptional accuracy at extreme range despite its weight.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_LMG_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>6.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

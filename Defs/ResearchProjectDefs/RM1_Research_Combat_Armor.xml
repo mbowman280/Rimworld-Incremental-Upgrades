@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ===== Flak Vest ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_FlakVest_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>flak vest upgrade I</label>
+    <description>Harder ceramic inserts and a reinforced carrier improve the flak vest's resistance to ballistic impacts.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>FlakArmor</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>0.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_FlakVest_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>flak vest upgrade II</label>
+    <description>Multi-layer composite plates and an ergonomic fit system substantially raise the flak vest's protection level.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>RM1_FlakVest_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_FlakVest_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>flak vest upgrade III</label>
+    <description>Advanced fabrication techniques produce a flak vest with near-spacer protection levels while retaining manageable weight.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_FlakVest_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== Flak Pants ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_FlakPants_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>flak pants upgrade I</label>
+    <description>Denser weave and improved plate geometry increase the flak pants' protection without sacrificing mobility.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>FlakArmor</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>0.0</researchViewX>
+    <researchViewY>6.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_FlakPants_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>flak pants upgrade II</label>
+    <description>Overlapping composite panels and a revised articulation system substantially improve lower-body armour coverage.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>RM1_FlakPants_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>6.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_FlakPants_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>flak pants upgrade III</label>
+    <description>Advanced fabrication yields flak pants whose composite plates rival early spacer-grade armour in protective capability.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_FlakPants_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>6.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== Recon Armor ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_ReconArmor_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>recon armor upgrade I</label>
+    <description>Refined plasteel-weave layering and improved neuro-memetic assistors push the recon armor's protection and mobility beyond baseline.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>ReconArmor</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>13.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_ReconArmor_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>recon armor upgrade II</label>
+    <description>Second-generation plasteel composite and tuned assistor servos deliver substantially enhanced protection and thermal resistance.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>RM1_ReconArmor_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>14.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_ReconArmor_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>recon armor upgrade III</label>
+    <description>Advanced fabrication methods yield a recon armor suit whose protection approaches that of a marine armor while retaining superior mobility.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_ReconArmor_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>15.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== Recon Helmet ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_ReconHelmet_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>recon helmet upgrade I</label>
+    <description>Enhanced visor integration and thicker plasteel-weave plate increase the recon helmet's combat effectiveness.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>ReconArmor</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>13.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_ReconHelmet_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>recon helmet upgrade II</label>
+    <description>Second-generation composite shell and improved status computer hardware substantially raise head protection and environmental resistance.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>RM1_ReconHelmet_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>14.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_ReconHelmet_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>recon helmet upgrade III</label>
+    <description>Advanced fabrication produces a recon helmet with exceptional ballistic protection and near-complete environmental sealing.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_ReconHelmet_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>15.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== Marine Armor ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_MarineArmor_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>marine armor upgrade I</label>
+    <description>Improved plasteel-weave plate density and upgraded neuro-memetic assistors push marine armor protection and durability beyond baseline.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>PoweredArmor</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>16.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_MarineArmor_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>marine armor upgrade II</label>
+    <description>Second-generation composite weave and enhanced joint actuators significantly improve marine armor's protection and thermal resistance.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>RM1_MarineArmor_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>17.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_MarineArmor_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>marine armor upgrade III</label>
+    <description>Advanced fabrication yields a marine armor suit representing the absolute pinnacle of powered combat armour technology.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_MarineArmor_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>18.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== Marine Helmet ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_MarineHelmet_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>marine helmet upgrade I</label>
+    <description>Reinforced plasteel-weave layers and an updated status computer improve the marine helmet's protection and utility.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>PoweredArmor</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>16.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_MarineHelmet_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>marine helmet upgrade II</label>
+    <description>Second-generation composite shell and integrated environmental sealing substantially raise the marine helmet's protection and endurance.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>RM1_MarineHelmet_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>17.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_MarineHelmet_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>marine helmet upgrade III</label>
+    <description>Advanced fabrication produces a marine helmet offering extreme ballistic protection and near-hermetic environmental sealing.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_MarineHelmet_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>18.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+
+
+  <!-- ===== Shield Belt ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_ShieldBelt_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>shield belt upgrade I</label>
+    <description>Refined field emitters and an improved power cell increase the shield belt's energy capacity and recharge rate.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>ShieldBelt</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>19.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_ShieldBelt_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>shield belt upgrade II</label>
+    <description>Second-generation emitter arrays and a dense plasteel housing substantially increase the shield belt's capacity and recovery speed.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>RM1_ShieldBelt_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>20.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_ShieldBelt_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>shield belt upgrade III</label>
+    <description>Advanced fabrication techniques push the shield belt to near-military-grade performance, with an energy maximum and recharge rate approaching dedicated combat shields.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_ShieldBelt_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>21.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

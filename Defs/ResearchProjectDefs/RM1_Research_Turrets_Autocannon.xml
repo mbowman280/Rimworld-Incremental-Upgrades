@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>RM1_Autocannon_T2_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>autocannon turret upgrade I</label>
+    <description>Improved shell feed mechanisms and reinforced barrel assemblies increase autocannon effectiveness.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>HeavyTurrets</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>8.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_Autocannon_T6_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>autocannon turret upgrade II</label>
+    <description>Peak industrial engineering applied to the autocannon platform.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>RM1_Autocannon_T2_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>9.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_Autocannon_T11_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>autocannon turret upgrade III</label>
+    <description>The ultimate autocannon. A spacer-grade siege weapon capable of suppressing entire battlefields.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_Autocannon_T6_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>10.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+</Defs>

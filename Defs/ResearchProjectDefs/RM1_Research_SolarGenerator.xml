@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>RM1_SolarGenerator_T2_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>improved solar generator</label>
+    <description>Higher-efficiency photovoltaic cells and improved tracking systems capture more energy from available sunlight.</description>
+    <baseCost>900</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SolarPanels</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>0.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_SolarGenerator_T4_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>spacer solar generator</label>
+    <description>Metamaterial optical concentrators and quantum dot absorbers push solar efficiency far beyond conventional limits.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_SolarGenerator_T2_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_SolarGenerator_T6_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>peak solar generator</label>
+    <description>Zero-reflection exotic-material cells achieve near-theoretical photon conversion rates, making every square meter of panel extraordinarily productive.</description>
+    <baseCost>4500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_SolarGenerator_T4_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
+  </ResearchProjectDef>
+</Defs>

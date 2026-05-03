@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase" Name="RM1_MiniTurret_Base" Abstract="True">
+    <defName>RM1_MiniTurret_Base</defName>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawHighlight>true</drawHighlight>
+    <drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMini_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/Security/TurretMini_MenuIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <WorkToBuild>1800</WorkToBuild>
+      <Mass>8</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>80</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Stunnable">
+        <affectedDamageDefs>
+          <li>Stun</li>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>30</costStuffCount>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <building>
+      <combatPower>45</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <designationHotKey>Misc2</designationHotKey>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_MiniTurret_Base">
+    <defName>RM1_MiniTurret_Mark_I</defName>
+    <label>mini-turret Mark I</label>
+    <description>An upgraded mini-turret with improved barrel lining and fire control. Tier 1 of 3.</description>
+    <statBases><MaxHitPoints>120</MaxHitPoints><Flammability>0.63</Flammability></statBases>
+    <costList><Steel>120</Steel><ComponentIndustrial>4</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until barrel change</fuelLabel>
+        <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+        <outOfFuelMessage>Needs new barrel</outOfFuelMessage>
+        <fuelFilter><thingDefs><li>Steel</li></thingDefs></fuelFilter>
+        <fuelCapacity>66</fuelCapacity>
+        <fuelMultiplier>0.75</fuelMultiplier>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+    <building><turretGunDef>RM1_Gun_MiniTurret_Mark_I</turretGunDef><turretBurstCooldownTime>1.8</turretBurstCooldownTime></building>
+    <researchPrerequisites><li>RM1_MiniTurret_T2_Research</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_MiniTurret_Base">
+    <defName>RM1_MiniTurret_Mark_II</defName>
+    <label>mini-turret Mark II</label>
+    <description>An industrial-peak mini-turret platform. Tier 2 of 3.</description>
+    <statBases><MaxHitPoints>250</MaxHitPoints><Flammability>0.41</Flammability></statBases>
+    <costList><Steel>200</Steel><ComponentIndustrial>5</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until barrel change</fuelLabel>
+        <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+        <outOfFuelMessage>Needs new barrel</outOfFuelMessage>
+        <fuelFilter><thingDefs><li>Steel</li></thingDefs></fuelFilter>
+        <fuelCapacity>90</fuelCapacity>
+        <fuelMultiplier>0.75</fuelMultiplier>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <constructionSkillPrerequisite>9</constructionSkillPrerequisite>
+    <building><turretGunDef>RM1_Gun_MiniTurret_Mark_II</turretGunDef><turretBurstCooldownTime>1.17</turretBurstCooldownTime></building>
+    <researchPrerequisites><li>RM1_MiniTurret_T6_Research</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_MiniTurret_Base">
+    <defName>RM1_MiniTurret_Mark_III</defName>
+    <label>mini-turret Mark III</label>
+    <description>The apex of mini-turret engineering. A relentless wall of fire at extreme range. Tier 3 of 3.</description>
+    <statBases><MaxHitPoints>622</MaxHitPoints><Flammability>0.24</Flammability></statBases>
+    <costList><Steel>300</Steel><ComponentIndustrial>8</ComponentIndustrial><ComponentSpacer>3</ComponentSpacer></costList>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until barrel change</fuelLabel>
+        <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+        <outOfFuelMessage>Needs new barrel</outOfFuelMessage>
+        <fuelFilter><thingDefs><li>Steel</li></thingDefs></fuelFilter>
+        <fuelCapacity>120</fuelCapacity>
+        <fuelMultiplier>0.75</fuelMultiplier>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <constructionSkillPrerequisite>11</constructionSkillPrerequisite>
+    <building><turretGunDef>RM1_Gun_MiniTurret_Mark_III</turretGunDef><turretBurstCooldownTime>0.68</turretBurstCooldownTime></building>
+    <placeWorkers><li>PlaceWorker_TurretTop</li></placeWorkers>
+    <researchPrerequisites><li>RM1_MiniTurret_T11_Research</li></researchPrerequisites>
+  </ThingDef>
+
+</Defs>

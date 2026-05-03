@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Incremental Upgrades</name>
+  <author>MarkB</author>
+  <packageId>MarkB.IncrementalUpgrades</packageId>
+  <description>Adds research-gated Mark I, II, and III upgrade tiers across a wide range of vanilla items. All upgrades are new items — originals remain buildable and are not replaced.
+
+WEAPONS
+Autopistol, machine pistol, chain shotgun, heavy SMG, LMG, assault rifle, sniper rifle, minigun, charge rifle, and charge lance each gain three upgrade tiers with improved damage, accuracy, and range. Mark III versions require the Fabrication Bench.
+
+ARMOR
+Flak vest, flak pants, recon armor, recon helmet, marine armor, and marine helmet each gain three tiers with improved protection. Shield belt gains three tiers with higher energy capacity and faster recharge.
+
+TURRETS
+Mini-turret, autocannon turret, and uranium slug turret each gain three tiers with improved firepower, durability, and reduced cooldown.
+
+BUILDINGS — POWER
+Solar generator, wind turbine, and battery each gain three tiers with improved output or storage capacity.
+
+BUILDINGS — MISC
+Heater, cooler, hydroponics basin, vitals monitor, ground-penetrating scanner, long-range mineral scanner, moisture pump, and ship reactor each gain three tiers with improved performance.
+
+BIONICS
+Nine bionic implants gain three upgrade tiers each with improved stat bonuses.
+
+All upgrades are gated behind a dedicated research tab (Incremental Upgrades) with tiered Industrial and Spacer prerequisites.</description>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+</ModMetaData>

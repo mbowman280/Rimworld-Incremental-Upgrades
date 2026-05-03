@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>RM1_GroundScanner_T2_Research</defName>
+    <label>ground-penetrating scanner I</label>
+    <description>Improved ground-penetrating scanner with faster mineral identification.</description>
+    <baseCost>1350</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>GroundPenetratingScanner</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <researchViewX>8.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_GroundScanner_T4_Research</defName>
+    <label>ground-penetrating scanner II</label>
+    <description>An advanced ground scanner with exotic-matter sensor arrays.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_GroundScanner_T2_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <researchViewX>9.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_GroundScanner_T6_Research</defName>
+    <label>ground-penetrating scanner III</label>
+    <description>The pinnacle of subsurface detection technology.</description>
+    <baseCost>6750</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_GroundScanner_T4_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <researchViewX>10.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+</Defs>

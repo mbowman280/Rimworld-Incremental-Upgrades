@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Vanilla WindTurbine: -2300W, Steel=100, CompInd=2, WorkToBuild=3300, size=(7,2) -->
+  <!-- Each tier: +500W output, build costs 20% compound from vanilla -->
+
+  <!-- ===== Tier I — 2800W ===== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RM1_WindTurbine_I</defName>
+    <thingClass>Building</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <label>wind turbine I</label>
+    <description>An improved wind turbine with optimized blade geometry. Produces up to 2800W in good wind conditions. Tier 1 of 3.</description>
+    <graphicData>
+      <texPath>Things/Building/Power/WindTurbine/WindTurbineBody</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(5,2)</drawSize>
+      <shadowData>
+        <volume>(0.6, 1.0, 1.6)</volume>
+        <offset>(-0.1,0,-0.08)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(2,0.15,1,1.4)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Power/WindTurbine/WindTurbine_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <canOverlapZones>false</canOverlapZones>
+    <blockWind>true</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>3300</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(7,2)</size>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <rotatable>true</rotatable>
+    <designationCategory>Power</designationCategory>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <building>
+      <allowAutoroof>false</allowAutoroof>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <costList>
+      <Steel>120</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <constructEffect>ConstructMetal</constructEffect>
+    <placeWorkers>
+      <li>PlaceWorker_WindTurbine</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlantWind</compClass>
+        <basePowerConsumption>-2800</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li>
+        <compClass>CompAutoCutWindTurbine</compClass>
+      </li>
+      <li Class="CompProperties_Stunnable">
+        <useLargeEMPEffecter>true</useLargeEMPEffecter>
+        <empEffecterDimensions>(1.8,0,0.5)</empEffecterDimensions>
+        <empEffecterOffset>(0,0,-0.5)</empEffecterOffset>
+        <empChancePerTick>0.3</empChancePerTick>
+        <affectedDamageDefs>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_WindTurbineAutoCut</li>
+    </inspectorTabs>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RM1_WindTurbine_T2_Research</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!-- ===== Tier II — 3800W ===== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RM1_WindTurbine_II</defName>
+    <thingClass>Building</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <label>wind turbine II</label>
+    <description>A spacer-era wind turbine with aerodynamic metamaterial blades. Produces up to 3800W in good wind conditions. Tier 2 of 3.</description>
+    <graphicData>
+      <texPath>Things/Building/Power/WindTurbine/WindTurbineBody</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(5,2)</drawSize>
+      <shadowData>
+        <volume>(0.6, 1.0, 1.6)</volume>
+        <offset>(-0.1,0,-0.08)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(2,0.15,1,1.4)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Power/WindTurbine/WindTurbine_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <canOverlapZones>false</canOverlapZones>
+    <blockWind>true</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>3300</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(7,2)</size>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <rotatable>true</rotatable>
+    <designationCategory>Power</designationCategory>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <building>
+      <allowAutoroof>false</allowAutoroof>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <costList>
+      <Steel>173</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <constructEffect>ConstructMetal</constructEffect>
+    <placeWorkers>
+      <li>PlaceWorker_WindTurbine</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlantWind</compClass>
+        <basePowerConsumption>-3800</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li>
+        <compClass>CompAutoCutWindTurbine</compClass>
+      </li>
+      <li Class="CompProperties_Stunnable">
+        <useLargeEMPEffecter>true</useLargeEMPEffecter>
+        <empEffecterDimensions>(1.8,0,0.5)</empEffecterDimensions>
+        <empEffecterOffset>(0,0,-0.5)</empEffecterOffset>
+        <empChancePerTick>0.3</empChancePerTick>
+        <affectedDamageDefs>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_WindTurbineAutoCut</li>
+    </inspectorTabs>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RM1_WindTurbine_T4_Research</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!-- ===== Tier III — 4800W ===== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RM1_WindTurbine_III</defName>
+    <thingClass>Building</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <label>wind turbine III</label>
+    <description>The pinnacle of wind power technology. Exotic matter rotors with zero mechanical losses produce up to 4800W. Tier 3 of 3.</description>
+    <graphicData>
+      <texPath>Things/Building/Power/WindTurbine/WindTurbineBody</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(5,2)</drawSize>
+      <shadowData>
+        <volume>(0.6, 1.0, 1.6)</volume>
+        <offset>(-0.1,0,-0.08)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(2,0.15,1,1.4)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Power/WindTurbine/WindTurbine_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <canOverlapZones>false</canOverlapZones>
+    <blockWind>true</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>3300</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(7,2)</size>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <rotatable>true</rotatable>
+    <designationCategory>Power</designationCategory>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <building>
+      <allowAutoroof>false</allowAutoroof>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <costList>
+      <Steel>249</Steel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <constructEffect>ConstructMetal</constructEffect>
+    <placeWorkers>
+      <li>PlaceWorker_WindTurbine</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlantWind</compClass>
+        <basePowerConsumption>-4800</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li>
+        <compClass>CompAutoCutWindTurbine</compClass>
+      </li>
+      <li Class="CompProperties_Stunnable">
+        <useLargeEMPEffecter>true</useLargeEMPEffecter>
+        <empEffecterDimensions>(1.8,0,0.5)</empEffecterDimensions>
+        <empEffecterOffset>(0,0,-0.5)</empEffecterOffset>
+        <empChancePerTick>0.3</empChancePerTick>
+        <affectedDamageDefs>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_WindTurbineAutoCut</li>
+    </inspectorTabs>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RM1_WindTurbine_T6_Research</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

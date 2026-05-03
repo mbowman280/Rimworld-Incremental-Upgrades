@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Vanilla Cooler: Steel=90, CompInd=3, power=200W, energyPerSecond=-21 -->
+  <!-- Each tier: energyPerSecond ×1.2 (more negative), Steel ×1.2, CompInd +1 per tier; power stays at 200W; no CompSpacer -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RM1_Cooler_I</defName>
+    <label>cooler I</label>
+    <description>An improved cooler with enhanced refrigerant cycling. Tier 1 of 3.</description>
+    <thingClass>Building_Cooler</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/TempControl/Cooler</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <blockWeather>true</blockWeather>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>1600</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <tickerType>Rare</tickerType>
+    <costList>
+      <Steel>99</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_TempControl">
+        <energyPerSecond>-75.6</energyPerSecond>
+      </li>
+    </comps>
+    <building>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <isAirtight>true</isAirtight>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_Cooler</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Temperature</designationCategory>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+    <researchPrerequisites><li>RM1_Cooler_T2_Research</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RM1_Cooler_II</defName>
+    <label>cooler II</label>
+    <description>A high-output cooler with precision temperature control. Tier 2 of 3.</description>
+    <thingClass>Building_Cooler</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/TempControl/Cooler</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <blockWeather>true</blockWeather>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>1600</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <tickerType>Rare</tickerType>
+    <costList>
+      <Steel>108</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_TempControl">
+        <energyPerSecond>-108.9</energyPerSecond>
+      </li>
+    </comps>
+    <building>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <isAirtight>true</isAirtight>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_Cooler</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Temperature</designationCategory>
+    <constructionSkillPrerequisite>9</constructionSkillPrerequisite>
+    <researchPrerequisites><li>RM1_Cooler_T4_Research</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RM1_Cooler_III</defName>
+    <label>cooler III</label>
+    <description>The apex of climate control. Chills entire bases to any desired temperature with ease. Tier 3 of 3.</description>
+    <thingClass>Building_Cooler</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/TempControl/Cooler</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <blockWeather>true</blockWeather>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>1600</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <tickerType>Rare</tickerType>
+    <costList>
+      <Steel>117</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_TempControl">
+        <energyPerSecond>-156.9</energyPerSecond>
+      </li>
+    </comps>
+    <building>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <isAirtight>true</isAirtight>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_Cooler</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Temperature</designationCategory>
+    <constructionSkillPrerequisite>11</constructionSkillPrerequisite>
+    <researchPrerequisites><li>RM1_Cooler_T6_Research</li></researchPrerequisites>
+  </ThingDef>
+
+</Defs>

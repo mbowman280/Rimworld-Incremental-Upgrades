@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- HydroponicsBasin is a concrete def with no Name="" so cannot be used as ParentName. -->
+  <!-- All fields replicated from vanilla here, with tier-specific overrides below. -->
+  <!-- Vanilla fertility = 2.8 (280%). Each tier adds 0.4 (40 percentage points). -->
+
+  <ThingDef ParentName="BuildingBase" Name="RM1_HydroponicsBasin_Base" Abstract="True">
+    <defName>RM1_HydroponicsBasin_Base</defName>
+    <noRightClickDraftAttack>true</noRightClickDraftAttack>
+    <thingClass>Building_PlantGrower</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/HydroponicsBasin</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <altitudeLayer>LowPlant</altitudeLayer>
+    <defaultPlacingRot>East</defaultPlacingRot>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <constructEffect>ConstructMetal</constructEffect>
+    <fillPercent>0.30</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <WorkToBuild>3500</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <size>(1,4)</size>
+    <building>
+      <defaultPlantToGrow>Plant_Rice</defaultPlantToGrow>
+      <sowTag>Hydroponic</sowTag>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+    </building>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>70</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Production</designationCategory>
+  </ThingDef>
+
+  <!-- ===== Tier I — 320% fertility ===== -->
+  <ThingDef ParentName="RM1_HydroponicsBasin_Base">
+    <defName>RM1_HydroponicsBasin_I</defName>
+    <label>hydroponics basin I</label>
+    <description>An improved hydroponics basin with enhanced nutrient delivery systems. 320% fertility. Tier 1 of 3.</description>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+    </statBases>
+    <fertility>3.2</fertility>
+    <costList>
+      <Steel>83</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RM1_Hydroponics_T2_Research</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!-- ===== Tier II — 400% fertility ===== -->
+  <ThingDef ParentName="RM1_HydroponicsBasin_Base">
+    <defName>RM1_HydroponicsBasin_II</defName>
+    <label>hydroponics basin II</label>
+    <description>A precision-engineered hydroponics basin using spacer-era growth techniques. 400% fertility. Tier 2 of 3.</description>
+    <statBases>
+      <MaxHitPoints>244</MaxHitPoints>
+    </statBases>
+    <fertility>4.0</fertility>
+    <costList>
+      <Steel>90</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RM1_Hydroponics_T4_Research</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!-- ===== Tier III — 480% fertility ===== -->
+  <ThingDef ParentName="RM1_HydroponicsBasin_Base">
+    <defName>RM1_HydroponicsBasin_III</defName>
+    <label>hydroponics basin III</label>
+    <description>The pinnacle of hydroponics technology. Can grow corn, haygrass, and devilstrand. Extraordinary nutrient saturation allows maximum crop yield. 480% fertility. Tier 3 of 3.</description>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+    </statBases>
+    <fertility>4.8</fertility>
+    <costList>
+      <Steel>98</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <building>
+      <defaultPlantToGrow>Plant_Rice</defaultPlantToGrow>
+      <sowTag>RM1_AdvancedHydroponic</sowTag>
+      <buildingTags><li>Production</li></buildingTags>
+    </building>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RM1_Hydroponics_T6_Research</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ================================================================ -->
+  <!--  AUTOPISTOL                                                       -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="BaseBullet" Name="RM1_Bullet_Autopistol_Base" Abstract="True">
+    <defName>RM1_Bullet_Autopistol_Base</defName>
+    <label>autopistol bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_Autopistol_Base">
+    <defName>RM1_Bullet_Autopistol_I</defName>
+    <label>autopistol bullet (Mark I)</label>
+    <projectile>
+      <damageAmountBase>12</damageAmountBase>
+      <speed>66</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_Autopistol_Base">
+    <defName>RM1_Bullet_Autopistol_II</defName>
+    <label>autopistol bullet (Mark II)</label>
+    <projectile>
+      <damageAmountBase>14</damageAmountBase>
+      <speed>79</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_Autopistol_Base">
+    <defName>RM1_Bullet_Autopistol_III</defName>
+    <label>autopistol bullet (Mark III)</label>
+    <projectile>
+      <damageAmountBase>17</damageAmountBase>
+      <speed>95</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun" Name="RM1_Gun_Autopistol_Base" Abstract="True">
+    <defName>RM1_Gun_Autopistol_Base</defName>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Autopistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <weaponClasses>
+      <li>RangedLight</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_Autopistol_Base">
+    <defName>RM1_Gun_Autopistol_I</defName>
+    <label>autopistol (Mark I)</label>
+    <description>An improved autopistol. Refined tolerances and a polished feed mechanism improve reliability and ballistic performance. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>6000</WorkToMake>
+      <Mass>1.0</Mass>
+      <AccuracyTouch>0.96</AccuracyTouch>
+      <AccuracyShort>0.84</AccuracyShort>
+      <AccuracyMedium>0.48</AccuracyMedium>
+      <AccuracyLong>0.36</AccuracyLong>
+      <RangedWeapon_Cooldown>0.80</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>36</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_Autopistol_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_Autopistol_I</defaultProjectile>
+        <warmupTime>0.24</warmupTime>
+        <range>31.1</range>
+        <soundCast>Shot_Autopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_Autopistol_Base">
+    <defName>RM1_Gun_Autopistol_II</defName>
+    <label>autopistol (Mark II)</label>
+    <description>A further-improved autopistol. Advanced alloys and precision-machined components extract peak performance from the blowback platform. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>7200</WorkToMake>
+      <Mass>0.8</Mass>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>0.58</AccuracyMedium>
+      <AccuracyLong>0.43</AccuracyLong>
+      <RangedWeapon_Cooldown>0.64</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>43</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_Autopistol_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_Autopistol_II</defaultProjectile>
+        <warmupTime>0.20</warmupTime>
+        <range>37.3</range>
+        <soundCast>Shot_Autopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_Autopistol_Base">
+    <defName>RM1_Gun_Autopistol_III</defName>
+    <label>autopistol (Mark III)</label>
+    <description>The pinnacle of autopistol engineering. Near-spacer tolerances and sub-millimeter machining deliver devastating ballistic performance from this compact sidearm. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>8640</WorkToMake>
+      <Mass>0.6</Mass>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>0.69</AccuracyMedium>
+      <AccuracyLong>0.52</AccuracyLong>
+      <RangedWeapon_Cooldown>0.51</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>43</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_Autopistol_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_Autopistol_III</defaultProjectile>
+        <warmupTime>0.15</warmupTime>
+        <range>44.7</range>
+        <soundCast>Shot_Autopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!-- ================================================================ -->
+  <!--  MACHINE PISTOL                                                   -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="BaseBullet" Name="RM1_Bullet_MachinePistol_Base" Abstract="True">
+    <defName>RM1_Bullet_MachinePistol_Base</defName>
+    <label>machine pistol bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_MachinePistol_Base">
+    <defName>RM1_Bullet_MachinePistol_I</defName>
+    <label>machine pistol bullet (Mark I)</label>
+    <projectile>
+      <damageAmountBase>7</damageAmountBase>
+      <speed>66</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_MachinePistol_Base">
+    <defName>RM1_Bullet_MachinePistol_II</defName>
+    <label>machine pistol bullet (Mark II)</label>
+    <projectile>
+      <damageAmountBase>9</damageAmountBase>
+      <speed>79</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_MachinePistol_Base">
+    <defName>RM1_Bullet_MachinePistol_III</defName>
+    <label>machine pistol bullet (Mark III)</label>
+    <projectile>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>95</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun" Name="RM1_Gun_MachinePistol_Base" Abstract="True">
+    <defName>RM1_Gun_MachinePistol_Base</defName>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/MachinePistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <weaponClasses>
+      <li>RangedLight</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_MachinePistol_Base">
+    <defName>RM1_Gun_MachinePistol_I</defName>
+    <label>machine pistol (Mark I)</label>
+    <description>An improved machine pistol. Tighter tolerances and a polished bolt group increase rate of fire and accuracy. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>13200</WorkToMake>
+      <Mass>2.0</Mass>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>0.78</AccuracyShort>
+      <AccuracyMedium>0.42</AccuracyMedium>
+      <AccuracyLong>0.18</AccuracyLong>
+      <RangedWeapon_Cooldown>0.72</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>54</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_MachinePistol_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_MachinePistol_I</defaultProjectile>
+        <warmupTime>0.40</warmupTime>
+        <range>23.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_Autopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_MachinePistol_Base">
+    <defName>RM1_Gun_MachinePistol_II</defName>
+    <label>machine pistol (Mark II)</label>
+    <description>A further-improved machine pistol. Advanced materials and a redesigned bolt group reduce cycle time and improve hit probability. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>15840</WorkToMake>
+      <Mass>1.6</Mass>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>0.94</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.22</AccuracyLong>
+      <RangedWeapon_Cooldown>0.58</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>65</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_MachinePistol_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_MachinePistol_II</defaultProjectile>
+        <warmupTime>0.32</warmupTime>
+        <range>28.7</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_Autopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_MachinePistol_Base">
+    <defName>RM1_Gun_MachinePistol_III</defName>
+    <label>machine pistol (Mark III)</label>
+    <description>The apex of compact automatic weapons. Advanced fabrication techniques push the machine pistol into near-spacer performance territory. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>19008</WorkToMake>
+      <Mass>1.3</Mass>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.26</AccuracyLong>
+      <RangedWeapon_Cooldown>0.46</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>65</Plasteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_MachinePistol_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_MachinePistol_III</defaultProjectile>
+        <warmupTime>0.26</warmupTime>
+        <range>34.4</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_Autopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+</Defs>

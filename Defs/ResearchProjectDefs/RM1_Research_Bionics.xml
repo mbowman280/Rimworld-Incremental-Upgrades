@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ===== BIONIC ARM ===== -->
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicArm_I_Research</defName>
+    <label>bionic arm upgrade I</label>
+    <description>Improve the bionic arm design to achieve 150% part efficiency with enhanced servo motors and nerve-link fidelity.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>Bionics</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicArm_II_Research</defName>
+    <label>bionic arm upgrade II</label>
+    <description>Push the bionic arm to 175% part efficiency with advanced micro-servo arrays and biogel lattice improvements.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>RM1_BionicArm_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicArm_III_Research</defName>
+    <label>bionic arm upgrade III</label>
+    <description>The pinnacle of bionic arm engineering — 200% part efficiency through precision-fabricated components and full-spectrum biogel integration.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites>
+      <li>RM1_BionicArm_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>3.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== BIONIC EYE ===== -->
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicEye_I_Research</defName>
+    <label>bionic eye upgrade I</label>
+    <description>Improve bionic eye optics and signal processing to achieve 150% part efficiency with enhanced low-light and wide-spectrum sensing.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>Bionics</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicEye_II_Research</defName>
+    <label>bionic eye upgrade II</label>
+    <description>Improve bionic eye to 175% efficiency with multi-layer sensor arrays and advanced neural pre-processing.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>RM1_BionicEye_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicEye_III_Research</defName>
+    <label>bionic eye upgrade III</label>
+    <description>The ultimate bionic eye at 200% efficiency — near-perfect visual acuity, full-spectrum sensing, and predictive signal enhancement.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites>
+      <li>RM1_BionicEye_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>3.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== BIONIC EAR ===== -->
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicEar_I_Research</defName>
+    <label>bionic ear upgrade I</label>
+    <description>Improve bionic ear sensitivity and noise filtering for 150% part efficiency, picking up finer sounds at greater range.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>Bionics</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicEar_II_Research</defName>
+    <label>bionic ear upgrade II</label>
+    <description>Improve bionic ear to 175% efficiency with directional microphone arrays and enhanced biogel nerve interface.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>RM1_BionicEar_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicEar_III_Research</defName>
+    <label>bionic ear upgrade III</label>
+    <description>The apex bionic ear at 200% efficiency — superhuman hearing range, perfect noise cancellation, and real-time audio analysis.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites>
+      <li>RM1_BionicEar_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>3.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== BIONIC HEART ===== -->
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicHeart_I_Research</defName>
+    <label>bionic heart upgrade I</label>
+    <description>Improve bionic heart pump efficiency and blood pressure regulation to achieve 150% part efficiency.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>Bionics</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicHeart_II_Research</defName>
+    <label>bionic heart upgrade II</label>
+    <description>Improve bionic heart to 175% efficiency with adaptive synthetic muscle fibers and an optimized high-flow circulation chamber.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>RM1_BionicHeart_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicHeart_III_Research</defName>
+    <label>bionic heart upgrade III</label>
+    <description>The ultimate bionic heart at 200% efficiency — precision-fabricated pump geometry for maximum circulation under any stress condition.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites>
+      <li>RM1_BionicHeart_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>3.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== BIONIC LEG ===== -->
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicLeg_I_Research</defName>
+    <label>bionic leg upgrade I</label>
+    <description>Improve bionic leg servo output and nerve-link responsiveness for 150% part efficiency and significantly improved mobility.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>Bionics</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicLeg_II_Research</defName>
+    <label>bionic leg upgrade II</label>
+    <description>Improve bionic leg to 175% efficiency with high-torque servo clusters and reinforced plasteel joint structures.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>RM1_BionicLeg_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicLeg_III_Research</defName>
+    <label>bionic leg upgrade III</label>
+    <description>The pinnacle bionic leg at 200% efficiency — precision-balanced articulation with maximum-output servo motors for unmatched locomotion.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites>
+      <li>RM1_BionicLeg_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>3.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== BIONIC SPINE ===== -->
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicSpine_I_Research</defName>
+    <label>bionic spine upgrade I</label>
+    <description>Improve the bionic spine's biogel nerve bundle and articulated core to exceed natural spine performance at 125% efficiency.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>Bionics</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicSpine_II_Research</defName>
+    <label>bionic spine upgrade II</label>
+    <description>Improve bionic spine to 150% efficiency with reinforced vertebral segments and enhanced neural signal routing.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>RM1_BionicSpine_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicSpine_III_Research</defName>
+    <label>bionic spine upgrade III</label>
+    <description>The ultimate bionic spine at 175% efficiency — fully optimized spinal column with maximum neural throughput.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites>
+      <li>RM1_BionicSpine_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>3.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== BIONIC JAW ===== -->
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicJaw_I_Research</defName>
+    <label>bionic jaw upgrade I</label>
+    <description>Improve bionic jaw servo precision and biosynthetic material composition for 150% part efficiency.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>Bionics</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>5.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicJaw_II_Research</defName>
+    <label>bionic jaw upgrade II</label>
+    <description>Improve bionic jaw to 175% efficiency with enhanced micro-servomotor arrays and plasteel tooth optimization.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>RM1_BionicJaw_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>6.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicJaw_III_Research</defName>
+    <label>bionic jaw upgrade III</label>
+    <description>The apex bionic jaw at 200% efficiency — full-range articulation with precision-milled components and maximum bite force.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites>
+      <li>RM1_BionicJaw_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>7.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== BIONIC STOMACH ===== -->
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicStomach_I_Research</defName>
+    <label>bionic stomach upgrade I</label>
+    <description>Improve bionic stomach digestive efficiency to 150% part efficiency with enhanced chemical synthesizers and near-elimination of food poisoning risk.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>Bionics</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>6.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicStomach_II_Research</defName>
+    <label>bionic stomach upgrade II</label>
+    <description>Improve bionic stomach to 175% efficiency with advanced toxin filtration arrays, reducing food poisoning to near-zero.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>RM1_BionicStomach_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>6.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicStomach_III_Research</defName>
+    <label>bionic stomach upgrade III</label>
+    <description>The ultimate bionic stomach at 200% efficiency — complete immunity to food poisoning and total pathogen neutralization.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites>
+      <li>RM1_BionicStomach_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>3.0</researchViewX>
+    <researchViewY>6.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== BIONIC TONGUE ===== -->
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicTongue_I_Research</defName>
+    <label>bionic tongue upgrade I</label>
+    <description>Improve bionic tongue neurogel interface and synthetic fiber composition to exceed natural tongue performance at 125% efficiency.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>Bionics</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>5.0</researchViewX>
+    <researchViewY>6.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicTongue_II_Research</defName>
+    <label>bionic tongue upgrade II</label>
+    <description>Improve bionic tongue to 150% efficiency with refined smooth-fiber musculature and enhanced neural coupling.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites><li>RM1_BionicTongue_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>6.0</researchViewX>
+    <researchViewY>6.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_BionicTongue_III_Research</defName>
+    <label>bionic tongue upgrade III</label>
+    <description>The apex bionic tongue at 175% efficiency — fully articulated synthetic fiber network with maximum sensory and speech fidelity.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RM1_BionicUpgrades</tab>
+    <prerequisites>
+      <li>RM1_BionicTongue_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>7.0</researchViewX>
+    <researchViewY>6.0</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

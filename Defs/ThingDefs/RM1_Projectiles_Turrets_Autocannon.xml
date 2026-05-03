@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet" Name="RM1_AutocannonShell_Base" Abstract="True">
+    <defName>RM1_AutocannonShell_Base</defName>
+    <label>autocannon shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <speed>95</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_AutocannonShell_Base">
+    <defName>RM1_Shell_Autocannon_Mark_I</defName><label>autocannon shell (Mark I)</label>
+    <projectile><damageAmountBase>30</damageAmountBase><armorPenetrationBase>0.59</armorPenetrationBase></projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_AutocannonShell_Base">
+    <defName>RM1_Shell_Autocannon_Mark_II</defName><label>autocannon shell (Mark II)</label>
+    <projectile><damageAmountBase>62</damageAmountBase><armorPenetrationBase>0.87</armorPenetrationBase></projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_AutocannonShell_Base">
+    <defName>RM1_Shell_Autocannon_Mark_III</defName><label>autocannon shell (Mark III)</label>
+    <projectile><damageAmountBase>154</damageAmountBase><armorPenetrationBase>0.95</armorPenetrationBase></projectile>
+  </ThingDef>
+
+</Defs>

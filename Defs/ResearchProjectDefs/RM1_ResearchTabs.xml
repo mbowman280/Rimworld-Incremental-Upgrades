@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ResearchTabDef>
+    <defName>RM1_IncrementalUpgrades</defName>
+    <label>Incremental Upg. - Buildings</label>
+    <generalTitle>Incremental upgrade research</generalTitle>
+    <generalDescription>Research projects that incrementally improve existing structures and equipment.</generalDescription>
+  </ResearchTabDef>
+
+  <ResearchTabDef>
+    <defName>RM1_CombatUpgrades</defName>
+    <label>Incremental Upg. - Combat</label>
+    <generalTitle>Incremental combat upgrade research</generalTitle>
+    <generalDescription>Research projects that incrementally improve existing weapons and armor.</generalDescription>
+  </ResearchTabDef>
+
+  <ResearchTabDef>
+    <defName>RM1_BionicUpgrades</defName>
+    <label>Incremental Upg. - Bionics</label>
+    <generalTitle>Incremental bionic upgrade research</generalTitle>
+    <generalDescription>Research projects that incrementally improve existing bionic body parts beyond standard specifications.</generalDescription>
+  </ResearchTabDef>
+
+</Defs>

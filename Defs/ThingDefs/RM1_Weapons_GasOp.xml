@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ================================================================ -->
+  <!--  CHAIN SHOTGUN                                                    -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="BaseBullet" Name="RM1_Bullet_ChainShotgun_Base" Abstract="True">
+    <defName>RM1_Bullet_ChainShotgun_Base</defName>
+    <label>shotgun blast</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_ChainShotgun_Base">
+    <defName>RM1_Bullet_ChainShotgun_I</defName>
+    <label>shotgun blast (Mark I)</label>
+    <projectile>
+      <damageAmountBase>22</damageAmountBase>
+      <stoppingPower>3.6</stoppingPower>
+      <armorPenetrationBase>0.17</armorPenetrationBase>
+      <speed>66</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_ChainShotgun_Base">
+    <defName>RM1_Bullet_ChainShotgun_II</defName>
+    <label>shotgun blast (Mark II)</label>
+    <projectile>
+      <damageAmountBase>26</damageAmountBase>
+      <stoppingPower>4.3</stoppingPower>
+      <armorPenetrationBase>0.20</armorPenetrationBase>
+      <speed>79</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_ChainShotgun_Base">
+    <defName>RM1_Bullet_ChainShotgun_III</defName>
+    <label>shotgun blast (Mark III)</label>
+    <projectile>
+      <damageAmountBase>31</damageAmountBase>
+      <stoppingPower>5.2</stoppingPower>
+      <armorPenetrationBase>0.24</armorPenetrationBase>
+      <speed>95</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun" Name="RM1_Gun_ChainShotgun_Base" Abstract="True">
+    <defName>RM1_Gun_ChainShotgun_Base</defName>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChainShotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Shotgun</soundInteract>
+    <weaponClasses>
+      <li>ShortShots</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+      <li>ShortShots</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_ChainShotgun_Base">
+    <defName>RM1_Gun_ChainShotgun_I</defName>
+    <label>chain shotgun (Mark I)</label>
+    <description>An improved chain shotgun. Optimised choke geometry and a redesigned cycling mechanism increase stopping power and cycle rate. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>37200</WorkToMake>
+      <Mass>3.6</Mass>
+      <AccuracyTouch>0.68</AccuracyTouch>
+      <AccuracyShort>0.77</AccuracyShort>
+      <AccuracyMedium>0.66</AccuracyMedium>
+      <AccuracyLong>0.54</AccuracyLong>
+      <RangedWeapon_Cooldown>1.08</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>84</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ChainShotgun_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_ChainShotgun_I</defaultProjectile>
+        <warmupTime>0.96</warmupTime>
+        <range>15.5</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_ChainShotgun_Base">
+    <defName>RM1_Gun_ChainShotgun_II</defName>
+    <label>chain shotgun (Mark II)</label>
+    <description>A further-improved chain shotgun. Polymer-coated shot and a reinforced receiver push terminal ballistics significantly higher. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>44640</WorkToMake>
+      <Mass>2.9</Mass>
+      <AccuracyTouch>0.82</AccuracyTouch>
+      <AccuracyShort>0.92</AccuracyShort>
+      <AccuracyMedium>0.79</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>0.86</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>101</Steel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ChainShotgun_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_ChainShotgun_II</defaultProjectile>
+        <warmupTime>0.77</warmupTime>
+        <range>18.6</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_ChainShotgun_Base">
+    <defName>RM1_Gun_ChainShotgun_III</defName>
+    <label>chain shotgun (Mark III)</label>
+    <description>The pinnacle of chain shotgun engineering. Advanced fabrication produces a weapon operating at the absolute limits of conventional propellant technology. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>53568</WorkToMake>
+      <Mass>2.3</Mass>
+      <AccuracyTouch>0.98</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.78</AccuracyLong>
+      <RangedWeapon_Cooldown>0.69</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>101</Plasteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ChainShotgun_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_ChainShotgun_III</defaultProjectile>
+        <warmupTime>0.62</warmupTime>
+        <range>22.3</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!-- ================================================================ -->
+  <!--  HEAVY SMG                                                        -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="BaseBullet" Name="RM1_Bullet_HeavySMG_Base" Abstract="True">
+    <defName>RM1_Bullet_HeavySMG_Base</defName>
+    <label>heavy SMG bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_HeavySMG_Base">
+    <defName>RM1_Bullet_HeavySMG_I</defName>
+    <label>heavy SMG bullet (Mark I)</label>
+    <projectile>
+      <damageAmountBase>14</damageAmountBase>
+      <speed>58</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_HeavySMG_Base">
+    <defName>RM1_Bullet_HeavySMG_II</defName>
+    <label>heavy SMG bullet (Mark II)</label>
+    <projectile>
+      <damageAmountBase>17</damageAmountBase>
+      <speed>69</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_HeavySMG_Base">
+    <defName>RM1_Bullet_HeavySMG_III</defName>
+    <label>heavy SMG bullet (Mark III)</label>
+    <projectile>
+      <damageAmountBase>21</damageAmountBase>
+      <speed>83</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun" Name="RM1_Gun_HeavySMG_Base" Abstract="True">
+    <defName>RM1_Gun_HeavySMG_Base</defName>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/HeavySMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <weaponClasses>
+      <li>RangedLight</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_HeavySMG_Base">
+    <defName>RM1_Gun_HeavySMG_I</defName>
+    <label>heavy SMG (Mark I)</label>
+    <description>An improved heavy SMG. A tighter barrel profile and polished feed ramp improve accuracy and rate of fire. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>28800</WorkToMake>
+      <Mass>2.8</Mass>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>0.78</AccuracyShort>
+      <AccuracyMedium>0.42</AccuracyMedium>
+      <AccuracyLong>0.24</AccuracyLong>
+      <RangedWeapon_Cooldown>1.32</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>90</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_HeavySMG_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_HeavySMG_I</defaultProjectile>
+        <warmupTime>0.72</warmupTime>
+        <range>27.5</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_HeavySMG_Base">
+    <defName>RM1_Gun_HeavySMG_II</defName>
+    <label>heavy SMG (Mark II)</label>
+    <description>A further-improved heavy SMG. Advanced alloy components and a revised gas regulator extend effective range and damage output. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>34560</WorkToMake>
+      <Mass>2.2</Mass>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>0.94</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.29</AccuracyLong>
+      <RangedWeapon_Cooldown>1.06</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>108</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_HeavySMG_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_HeavySMG_II</defaultProjectile>
+        <warmupTime>0.58</warmupTime>
+        <range>33.0</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_HeavySMG_Base">
+    <defName>RM1_Gun_HeavySMG_III</defName>
+    <label>heavy SMG (Mark III)</label>
+    <description>The pinnacle of heavy SMG engineering. Near-spacer manufacturing tolerances create an instrument of devastating close-range firepower. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>41472</WorkToMake>
+      <Mass>1.8</Mass>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>0.61</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>108</Plasteel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_HeavySMG_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>11</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_HeavySMG_III</defaultProjectile>
+        <warmupTime>0.46</warmupTime>
+        <range>39.6</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!-- ================================================================ -->
+  <!--  LMG                                                              -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="BaseBullet" Name="RM1_Bullet_LMG_Base" Abstract="True">
+    <defName>RM1_Bullet_LMG_Base</defName>
+    <label>LMG bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_LMG_Base">
+    <defName>RM1_Bullet_LMG_I</defName>
+    <label>LMG bullet (Mark I)</label>
+    <projectile>
+      <damageAmountBase>14</damageAmountBase>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_LMG_Base">
+    <defName>RM1_Bullet_LMG_II</defName>
+    <label>LMG bullet (Mark II)</label>
+    <projectile>
+      <damageAmountBase>17</damageAmountBase>
+      <speed>66</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_LMG_Base">
+    <defName>RM1_Bullet_LMG_III</defName>
+    <label>LMG bullet (Mark III)</label>
+    <projectile>
+      <damageAmountBase>21</damageAmountBase>
+      <speed>79</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun" Name="RM1_Gun_LMG_Base" Abstract="True">
+    <defName>RM1_Gun_LMG_Base</defName>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/LMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_LMG_Base">
+    <defName>RM1_Gun_LMG_I</defName>
+    <label>LMG (Mark I)</label>
+    <description>An improved LMG. A lighter bolt carrier group and improved ammunition feed enhance sustained accuracy and range. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>40800</WorkToMake>
+      <Mass>6.8</Mass>
+      <AccuracyTouch>0.48</AccuracyTouch>
+      <AccuracyShort>0.58</AccuracyShort>
+      <AccuracyMedium>0.42</AccuracyMedium>
+      <AccuracyLong>0.31</AccuracyLong>
+      <RangedWeapon_Cooldown>1.28</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>90</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_LMG_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_LMG_I</defaultProjectile>
+        <warmupTime>1.44</warmupTime>
+        <range>31.1</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_LMG_Base">
+    <defName>RM1_Gun_LMG_II</defName>
+    <label>LMG (Mark II)</label>
+    <description>A further-improved LMG. A chrome-lined barrel and precision-balanced rotating bolt dramatically improve accuracy and heat dissipation. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>48960</WorkToMake>
+      <Mass>5.4</Mass>
+      <AccuracyTouch>0.58</AccuracyTouch>
+      <AccuracyShort>0.69</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.37</AccuracyLong>
+      <RangedWeapon_Cooldown>1.02</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>108</Steel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_LMG_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_LMG_II</defaultProjectile>
+        <warmupTime>1.15</warmupTime>
+        <range>37.3</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_LMG_Base">
+    <defName>RM1_Gun_LMG_III</defName>
+    <label>LMG (Mark III)</label>
+    <description>The pinnacle of LMG engineering. Advanced fabrication produces a weapon with virtually frictionless internals delivering exceptional fire at extreme range. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>58752</WorkToMake>
+      <Mass>4.4</Mass>
+      <AccuracyTouch>0.69</AccuracyTouch>
+      <AccuracyShort>0.83</AccuracyShort>
+      <AccuracyMedium>0.61</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>0.82</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>108</Plasteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_LMG_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_LMG_III</defaultProjectile>
+        <warmupTime>0.92</warmupTime>
+        <range>44.7</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+</Defs>

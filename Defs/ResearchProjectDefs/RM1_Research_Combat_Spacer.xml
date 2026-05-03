@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ===== Charge Rifle ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_ChargeRifle_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>charge rifle upgrade I</label>
+    <description>Refined pulse-charge geometry and a re-tuned acceleration rail increase charge rifle damage and effective range.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>ChargedShot</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>15.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_ChargeRifle_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>charge rifle upgrade II</label>
+    <description>Advanced charge containment cells and a re-engineered firing sequence push the charge rifle's energy delivery significantly higher.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>RM1_ChargeRifle_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>16.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_ChargeRifle_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>charge rifle upgrade III</label>
+    <description>The pinnacle of pulse-charge rifle engineering. Shots carry enough energy to punch through almost any personal armour at standoff range.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_ChargeRifle_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>17.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== Charge Lance ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_ChargeLance_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>charge lance upgrade I</label>
+    <description>An extended acceleration rail and improved charge cell yield a charge lance with greatly increased range and impact force.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>ChargedShot</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>15.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_ChargeLance_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>charge lance upgrade II</label>
+    <description>High-density charge containment and a superconducting rail drastically raise the charge lance's penetration and stopping power.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites><li>RM1_ChargeLance_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>16.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_ChargeLance_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>charge lance upgrade III</label>
+    <description>The absolute apex of rail-assisted pulse technology. A single shot from this weapon can end almost any engagement instantly.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_ChargeLance_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>17.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

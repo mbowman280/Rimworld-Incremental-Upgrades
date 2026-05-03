@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Add vanilla special recipes to our upgraded electric stoves. -->
+  <!-- We patch our own stove defs' recipes list rather than the vanilla recipe's -->
+  <!-- recipeUsers node, since many vanilla recipes don't declare recipeUsers. -->
+
+  <!-- Packaged survival meal + bulk (requires PackagedSurvivalMeal research) -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RM1_ElectricStoveII"]/recipes</xpath>
+    <value>
+      <li>CookMealSurvival</li>
+      <li>CookMealSurvivalBulk</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RM1_ElectricStoveIII"]/recipes</xpath>
+    <value>
+      <li>CookMealSurvival</li>
+      <li>CookMealSurvivalBulk</li>
+    </value>
+  </Operation>
+
+  <!-- Psychite tea (requires PsychiteTea research) -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RM1_ElectricStoveII"]/recipes</xpath>
+    <value>
+      <li>Make_PsychiteTea</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RM1_ElectricStoveIII"]/recipes</xpath>
+    <value>
+      <li>Make_PsychiteTea</li>
+    </value>
+  </Operation>
+
+  <!-- Baby food + bulk (Biotech DLC only) -->
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+    <xpath>Defs/ThingDef[defName="RM1_ElectricStoveII"]/recipes</xpath>
+    <value>
+      <li>Make_BabyFood</li>
+      <li>Make_BabyFoodBulk</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+    <xpath>Defs/ThingDef[defName="RM1_ElectricStoveIII"]/recipes</xpath>
+    <value>
+      <li>Make_BabyFood</li>
+      <li>Make_BabyFoodBulk</li>
+    </value>
+  </Operation>
+
+</Patch>

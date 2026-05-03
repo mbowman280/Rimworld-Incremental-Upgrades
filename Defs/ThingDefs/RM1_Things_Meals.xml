@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Simple meals: parent MealCooked (Name="MealCooked", Abstract=True) -->
+  <!-- Fine meals: parent MealFineBase (Name="MealFineBase", Abstract=True) -->
+  <!-- Lavish meals: parent MealLavishBase (Name="MealLavishBase", Abstract=True) -->
+
+  <!-- ===== Simple Meal v2 ===== -->
+  <ThingDef ParentName="MealCooked">
+    <defName>RM1_MealSimple_vII</defName>
+    <label>simple meal v2</label>
+    <description>A carefully prepared simple meal made with precise heat control. More nutritious than the standard version.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <Nutrition>1.10</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetFeedingAnimals>-25</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>
+
+  <!-- ===== Fine Meal v2 ===== -->
+  <ThingDef ParentName="MealFineBase">
+    <defName>RM1_MealFine_vII</defName>
+    <label>fine meal v2</label>
+    <description>An enhanced fine meal with improved preparation techniques. Noticeably more satisfying than standard fine meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Fine</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>28</MarketValue>
+      <Nutrition>1.20</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ===== Lavish Meal v2 ===== -->
+  <ThingDef ParentName="MealLavishBase">
+    <defName>RM1_MealLavish_vII</defName>
+    <label>lavish meal v2</label>
+    <description>An exquisite lavish meal prepared with refined culinary science. Extraordinary nutrition from carefully selected ingredients.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Lavish</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>55</MarketValue>
+      <Nutrition>1.32</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ===== Simple Meal v3 ===== -->
+  <ThingDef ParentName="MealCooked">
+    <defName>RM1_MealSimple_vIII</defName>
+    <label>simple meal v3</label>
+    <description>A spacer-era simple meal using precision molecular techniques. Remarkable nutrition from minimal ingredients.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>25</MarketValue>
+      <Nutrition>1.30</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetFeedingAnimals>-25</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>
+
+  <!-- ===== Fine Meal v3 ===== -->
+  <ThingDef ParentName="MealFineBase">
+    <defName>RM1_MealFine_vIII</defName>
+    <label>fine meal v3</label>
+    <description>A spacer-era fine meal prepared with cutting-edge culinary technology. Dense with nutrition and rich in flavor.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Fine</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>36</MarketValue>
+      <Nutrition>1.40</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ===== Lavish Meal v3 ===== -->
+  <ThingDef ParentName="MealLavishBase">
+    <defName>RM1_MealLavish_vIII</defName>
+    <label>lavish meal v3</label>
+    <description>The pinnacle of culinary achievement. Prepared with spacer-era precision on an advanced electric stove. Extraordinarily nutritious.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Lavish</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>70</MarketValue>
+      <Nutrition>1.52</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

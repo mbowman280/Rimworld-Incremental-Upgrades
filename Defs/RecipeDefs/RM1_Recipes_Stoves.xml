@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Inherit from vanilla CookMealBase to get the correct fixedIngredientFilter,
+       defaultIngredientFilter, and workSkill — same base all vanilla meal recipes use. -->
+
+  <!-- ===== Stove II Recipes (v2 meals) ===== -->
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RM1_Recipe_CookMealSimple_vII</defName>
+    <label>cook simple meal v2</label>
+    <description>Cook an improved simple meal with enhanced nutrition.</description>
+    <jobString>Cooking simple meal v2.</jobString>
+    <workAmount>500</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>FoodRaw</li></categories>
+        </filter>
+        <count>0.40</count>
+      </li>
+    </ingredients>
+    <products>
+      <RM1_MealSimple_vII>1</RM1_MealSimple_vII>
+    </products>
+    <skillRequirements>
+      <Cooking>2</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>RM1_StoveII_Research</researchPrerequisite>
+    <displayPriority>105</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RM1_Recipe_CookMealFine_vII</defName>
+    <label>cook fine meal v2</label>
+    <description>Cook an improved fine meal with enhanced nutrition.</description>
+    <jobString>Cooking fine meal v2.</jobString>
+    <workAmount>800</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>FoodRaw</li></categories>
+        </filter>
+        <count>0.60</count>
+      </li>
+    </ingredients>
+    <products>
+      <RM1_MealFine_vII>1</RM1_MealFine_vII>
+    </products>
+    <skillRequirements>
+      <Cooking>8</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>RM1_StoveII_Research</researchPrerequisite>
+    <displayPriority>205</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RM1_Recipe_CookMealLavish_vII</defName>
+    <label>cook lavish meal v2</label>
+    <description>Cook an improved lavish meal with enhanced nutrition.</description>
+    <jobString>Cooking lavish meal v2.</jobString>
+    <workAmount>1400</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>FoodRaw</li></categories>
+        </filter>
+        <count>0.80</count>
+      </li>
+    </ingredients>
+    <products>
+      <RM1_MealLavish_vII>1</RM1_MealLavish_vII>
+    </products>
+    <skillRequirements>
+      <Cooking>10</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>RM1_StoveII_Research</researchPrerequisite>
+    <displayPriority>305</displayPriority>
+  </RecipeDef>
+
+  <!-- ===== Stove II Bulk Recipes (v2 meals x6) ===== -->
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RM1_Recipe_CookMealSimple_vII_Bulk</defName>
+    <label>cook simple meal v2 x6</label>
+    <description>Cook 6 improved simple meals with enhanced nutrition.</description>
+    <jobString>Cooking 6 simple meals v2.</jobString>
+    <workAmount>3000</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>FoodRaw</li></categories>
+        </filter>
+        <count>2.40</count>
+      </li>
+    </ingredients>
+    <products>
+      <RM1_MealSimple_vII>6</RM1_MealSimple_vII>
+    </products>
+    <skillRequirements>
+      <Cooking>2</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>RM1_StoveII_Research</researchPrerequisite>
+    <displayPriority>115</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RM1_Recipe_CookMealFine_vII_Bulk</defName>
+    <label>cook fine meal v2 x6</label>
+    <description>Cook 6 improved fine meals with enhanced nutrition.</description>
+    <jobString>Cooking 6 fine meals v2.</jobString>
+    <workAmount>4800</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>FoodRaw</li></categories>
+        </filter>
+        <count>3.60</count>
+      </li>
+    </ingredients>
+    <products>
+      <RM1_MealFine_vII>6</RM1_MealFine_vII>
+    </products>
+    <skillRequirements>
+      <Cooking>8</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>RM1_StoveII_Research</researchPrerequisite>
+    <displayPriority>215</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RM1_Recipe_CookMealLavish_vII_Bulk</defName>
+    <label>cook lavish meal v2 x6</label>
+    <description>Cook 6 improved lavish meals with enhanced nutrition.</description>
+    <jobString>Cooking 6 lavish meals v2.</jobString>
+    <workAmount>8400</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>FoodRaw</li></categories>
+        </filter>
+        <count>4.80</count>
+      </li>
+    </ingredients>
+    <products>
+      <RM1_MealLavish_vII>6</RM1_MealLavish_vII>
+    </products>
+    <skillRequirements>
+      <Cooking>10</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>RM1_StoveII_Research</researchPrerequisite>
+    <displayPriority>315</displayPriority>
+  </RecipeDef>
+
+  <!-- ===== Stove III Recipes (v3 meals) ===== -->
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RM1_Recipe_CookMealSimple_vIII</defName>
+    <label>cook simple meal v3</label>
+    <description>Cook a spacer-era simple meal with maximum nutrition efficiency.</description>
+    <jobString>Cooking simple meal v3.</jobString>
+    <workAmount>500</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>FoodRaw</li></categories>
+        </filter>
+        <count>0.30</count>
+      </li>
+    </ingredients>
+    <products>
+      <RM1_MealSimple_vIII>1</RM1_MealSimple_vIII>
+    </products>
+    <skillRequirements>
+      <Cooking>4</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>RM1_StoveIII_Research</researchPrerequisite>
+    <displayPriority>106</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RM1_Recipe_CookMealFine_vIII</defName>
+    <label>cook fine meal v3</label>
+    <description>Cook a spacer-era fine meal with maximum nutrition efficiency.</description>
+    <jobString>Cooking fine meal v3.</jobString>
+    <workAmount>800</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>FoodRaw</li></categories>
+        </filter>
+        <count>0.50</count>
+      </li>
+    </ingredients>
+    <products>
+      <RM1_MealFine_vIII>1</RM1_MealFine_vIII>
+    </products>
+    <skillRequirements>
+      <Cooking>10</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>RM1_StoveIII_Research</researchPrerequisite>
+    <displayPriority>206</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RM1_Recipe_CookMealLavish_vIII</defName>
+    <label>cook lavish meal v3</label>
+    <description>Cook a spacer-era lavish meal with maximum nutrition efficiency.</description>
+    <jobString>Cooking lavish meal v3.</jobString>
+    <workAmount>1400</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>FoodRaw</li></categories>
+        </filter>
+        <count>0.70</count>
+      </li>
+    </ingredients>
+    <products>
+      <RM1_MealLavish_vIII>1</RM1_MealLavish_vIII>
+    </products>
+    <skillRequirements>
+      <Cooking>12</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>RM1_StoveIII_Research</researchPrerequisite>
+    <displayPriority>306</displayPriority>
+  </RecipeDef>
+
+  <!-- ===== Stove III Bulk Recipes (v3 meals x8) ===== -->
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RM1_Recipe_CookMealSimple_vIII_Bulk</defName>
+    <label>cook simple meal v3 x8</label>
+    <description>Cook 8 spacer-era simple meals with maximum nutrition efficiency.</description>
+    <jobString>Cooking 8 simple meals v3.</jobString>
+    <workAmount>4000</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>FoodRaw</li></categories>
+        </filter>
+        <count>2.40</count>
+      </li>
+    </ingredients>
+    <products>
+      <RM1_MealSimple_vIII>8</RM1_MealSimple_vIII>
+    </products>
+    <skillRequirements>
+      <Cooking>4</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>RM1_StoveIII_Research</researchPrerequisite>
+    <displayPriority>116</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RM1_Recipe_CookMealFine_vIII_Bulk</defName>
+    <label>cook fine meal v3 x8</label>
+    <description>Cook 8 spacer-era fine meals with maximum nutrition efficiency.</description>
+    <jobString>Cooking 8 fine meals v3.</jobString>
+    <workAmount>6400</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>FoodRaw</li></categories>
+        </filter>
+        <count>4.00</count>
+      </li>
+    </ingredients>
+    <products>
+      <RM1_MealFine_vIII>8</RM1_MealFine_vIII>
+    </products>
+    <skillRequirements>
+      <Cooking>10</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>RM1_StoveIII_Research</researchPrerequisite>
+    <displayPriority>216</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RM1_Recipe_CookMealLavish_vIII_Bulk</defName>
+    <label>cook lavish meal v3 x8</label>
+    <description>Cook 8 spacer-era lavish meals with maximum nutrition efficiency.</description>
+    <jobString>Cooking 8 lavish meals v3.</jobString>
+    <workAmount>11200</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>FoodRaw</li></categories>
+        </filter>
+        <count>5.60</count>
+      </li>
+    </ingredients>
+    <products>
+      <RM1_MealLavish_vIII>8</RM1_MealLavish_vIII>
+    </products>
+    <skillRequirements>
+      <Cooking>12</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>RM1_StoveIII_Research</researchPrerequisite>
+    <displayPriority>316</displayPriority>
+  </RecipeDef>
+
+  <!-- Bulk psychite tea x4 — available on both upgraded stoves after vanilla PsychiteTea research -->
+  <RecipeDef>
+    <defName>RM1_Make_PsychiteTeaBulk</defName>
+    <label>make psychite tea x4</label>
+    <description>Brew four cups of psychite tea at once.</description>
+    <jobString>Brewing psychite tea.</jobString>
+    <workAmount>3200</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PsychoidLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>16</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>PsychoidLeaves</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <PsychiteTea>4</PsychiteTea>
+    </products>
+    <skillRequirements>
+      <Cooking>3</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>PsychoidBrewing</researchPrerequisite>
+    <recipeUsers>
+      <li>RM1_ElectricStoveII</li>
+      <li>RM1_ElectricStoveIII</li>
+    </recipeUsers>
+    <displayPriority>425</displayPriority>
+  </RecipeDef>
+
+</Defs>

@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ================================================================ -->
+  <!--  CHARGE RIFLE                                                     -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="BaseBullet" Name="RM1_Bullet_ChargeRifle_Base" Abstract="True">
+    <defName>RM1_Bullet_ChargeRifle_Base</defName>
+    <label>charge shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_ChargeRifle_Base">
+    <defName>RM1_Bullet_ChargeRifle_I</defName>
+    <label>charge shot (Mark I)</label>
+    <projectile>
+      <damageAmountBase>19</damageAmountBase>
+      <armorPenetrationBase>0.42</armorPenetrationBase>
+      <speed>84</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_ChargeRifle_Base">
+    <defName>RM1_Bullet_ChargeRifle_II</defName>
+    <label>charge shot (Mark II)</label>
+    <projectile>
+      <damageAmountBase>23</damageAmountBase>
+      <armorPenetrationBase>0.50</armorPenetrationBase>
+      <speed>101</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_ChargeRifle_Base">
+    <defName>RM1_Bullet_ChargeRifle_III</defName>
+    <label>charge shot (Mark III)</label>
+    <projectile>
+      <damageAmountBase>28</damageAmountBase>
+      <armorPenetrationBase>0.61</armorPenetrationBase>
+      <speed>121</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun" Name="RM1_Gun_ChargeRifle_Base" Abstract="True">
+    <defName>RM1_Gun_ChargeRifle_Base</defName>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <weaponClasses>
+      <li>RangedLight</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>SpacerGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_ChargeRifle_Base">
+    <defName>RM1_Gun_ChargeRifle_I</defName>
+    <label>charge rifle (Mark I)</label>
+    <description>An improved charge rifle. Refined pulse-charge geometry and a re-tuned acceleration rail increase damage and effective range. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>54000</WorkToMake>
+      <Mass>3.7</Mass>
+      <AccuracyTouch>0.66</AccuracyTouch>
+      <AccuracyShort>0.77</AccuracyShort>
+      <AccuracyMedium>0.66</AccuracyMedium>
+      <AccuracyLong>0.54</AccuracyLong>
+      <RangedWeapon_Cooldown>1.60</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>60</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ChargeRifle_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_ChargeRifle_I</defaultProjectile>
+        <warmupTime>0.80</warmupTime>
+        <range>33.5</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_ChargeRifle_Base">
+    <defName>RM1_Gun_ChargeRifle_II</defName>
+    <label>charge rifle (Mark II)</label>
+    <description>A further-improved charge rifle. Advanced charge containment and a re-engineered firing sequence push energy delivery significantly higher. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>64800</WorkToMake>
+      <Mass>2.9</Mass>
+      <AccuracyTouch>0.79</AccuracyTouch>
+      <AccuracyShort>0.92</AccuracyShort>
+      <AccuracyMedium>0.79</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>1.28</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>72</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ChargeRifle_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>11</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_ChargeRifle_II</defaultProjectile>
+        <warmupTime>0.64</warmupTime>
+        <range>40.2</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_ChargeRifle_Base">
+    <defName>RM1_Gun_ChargeRifle_III</defName>
+    <label>charge rifle (Mark III)</label>
+    <description>The pinnacle of pulse-charge rifle engineering. Shots carry enough energy to punch through almost any personal armour at standoff range. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>77760</WorkToMake>
+      <Mass>2.4</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.78</AccuracyLong>
+      <RangedWeapon_Cooldown>1.02</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>86</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ChargeRifle_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>13</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_ChargeRifle_III</defaultProjectile>
+        <warmupTime>0.51</warmupTime>
+        <range>48.2</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!-- ================================================================ -->
+  <!--  CHARGE LANCE                                                     -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="BaseBullet" Name="RM1_Bullet_ChargeLance_Base" Abstract="True">
+    <defName>RM1_Bullet_ChargeLance_Base</defName>
+    <label>charge lance shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/ChargeLanceShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_ChargeLance_Base">
+    <defName>RM1_Bullet_ChargeLance_I</defName>
+    <label>charge lance bolt (Mark I)</label>
+    <projectile>
+      <damageAmountBase>36</damageAmountBase>
+      <stoppingPower>1.8</stoppingPower>
+      <speed>144</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_ChargeLance_Base">
+    <defName>RM1_Bullet_ChargeLance_II</defName>
+    <label>charge lance bolt (Mark II)</label>
+    <projectile>
+      <damageAmountBase>43</damageAmountBase>
+      <stoppingPower>2.2</stoppingPower>
+      <speed>173</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Bullet_ChargeLance_Base">
+    <defName>RM1_Bullet_ChargeLance_III</defName>
+    <label>charge lance bolt (Mark III)</label>
+    <projectile>
+      <damageAmountBase>52</damageAmountBase>
+      <stoppingPower>2.6</stoppingPower>
+      <speed>207</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun" Name="RM1_Gun_ChargeLance_Base" Abstract="True">
+    <defName>RM1_Gun_ChargeLance_Base</defName>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeLance</soundInteract>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>MechanoidGunMedium</li>
+      <li>SpacerGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_ChargeLance_Base">
+    <defName>RM1_Gun_ChargeLance_I</defName>
+    <label>charge lance (Mark I)</label>
+    <description>An improved charge lance. An extended acceleration rail and improved charge cell yield greatly increased range and impact force. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>72000</WorkToMake>
+      <Mass>6.4</Mass>
+      <AccuracyTouch>0.78</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>1.00</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>2.16</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>72</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ChargeLance_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>11</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_ChargeLance_I</defaultProjectile>
+        <warmupTime>1.36</warmupTime>
+        <range>39.5</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_ChargeLance_Base">
+    <defName>RM1_Gun_ChargeLance_II</defName>
+    <label>charge lance (Mark II)</label>
+    <description>A further-improved charge lance. High-density charge containment and a superconducting rail drastically raise penetration and stopping power. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>86400</WorkToMake>
+      <Mass>5.1</Mass>
+      <AccuracyTouch>0.94</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>1.00</AccuracyMedium>
+      <AccuracyLong>1.00</AccuracyLong>
+      <RangedWeapon_Cooldown>1.73</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>86</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ChargeLance_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>13</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_ChargeLance_II</defaultProjectile>
+        <warmupTime>1.09</warmupTime>
+        <range>47.4</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="RM1_Gun_ChargeLance_Base">
+    <defName>RM1_Gun_ChargeLance_III</defName>
+    <label>charge lance (Mark III)</label>
+    <description>The absolute apex of rail-assisted pulse technology. A single shot from this weapon can end almost any engagement instantly. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>103680</WorkToMake>
+      <Mass>4.1</Mass>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>1.00</AccuracyMedium>
+      <AccuracyLong>1.00</AccuracyLong>
+      <RangedWeapon_Cooldown>1.38</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>104</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ChargeLance_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RM1_Bullet_ChargeLance_III</defaultProjectile>
+        <warmupTime>0.87</warmupTime>
+        <range>56.9</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+</Defs>

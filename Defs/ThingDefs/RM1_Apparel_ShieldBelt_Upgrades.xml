@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ================================================================ -->
+  <!--  SHIELD BELT — shared base                                        -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="ApparelBase" Name="RM1_ShieldBelt_Base" Abstract="True">
+    <defName>RM1_ShieldBelt_Base</defName>
+    <thingClass>Apparel</thingClass>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ShieldBelt/ShieldBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <techLevel>Spacer</techLevel>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+        <li>BeltDefense</li>
+      </tags>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    </apparel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li><weight>10</weight><only>(0.33,0.33,0.33,1)</only></li>
+        <li><weight>10</weight><only>(0.65,0.65,0.65,1)</only></li>
+        <li><weight>6</weight><min>(0.3,0.3,0.3,1)</min><max>(0.5,0.5,0.5,1)</max></li>
+        <li><weight>10</weight><only>(0.9,0.9,0.9,1)</only></li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+  <!-- ================================================================ -->
+  <!--  SHIELD BELT — Mark I                                             -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="RM1_ShieldBelt_Base">
+    <defName>RM1_ShieldBelt_I</defName>
+    <label>shield belt (Mark I)</label>
+    <description>An improved shield belt. Refined field emitters and a higher-capacity power cell extend the shield's energy maximum and speed up recharge. Tier 1 of 3.</description>
+    <statBases>
+      <Mass>3.2</Mass>
+      <WorkToMake>17000</WorkToMake>
+      <Flammability>0.36</Flammability>
+      <EnergyShieldRechargeRate>0.18</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>1.40</EnergyShieldEnergyMax>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <Plasteel>24</Plasteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ShieldBelt_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- ================================================================ -->
+  <!--  SHIELD BELT — Mark II                                            -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="RM1_ShieldBelt_Base">
+    <defName>RM1_ShieldBelt_II</defName>
+    <label>shield belt (Mark II)</label>
+    <description>A substantially improved shield belt. Second-generation emitters and a dense plasteel housing significantly increase the shield's capacity and recovery speed. Tier 2 of 3.</description>
+    <statBases>
+      <Mass>3.5</Mass>
+      <WorkToMake>20000</WorkToMake>
+      <Flammability>0.32</Flammability>
+      <EnergyShieldRechargeRate>0.23</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>1.70</EnergyShieldEnergyMax>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <costList>
+      <Steel>75</Steel>
+      <Plasteel>30</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ShieldBelt_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- ================================================================ -->
+  <!--  SHIELD BELT — Mark III                                           -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="RM1_ShieldBelt_Base">
+    <defName>RM1_ShieldBelt_III</defName>
+    <label>shield belt (Mark III)</label>
+    <description>The pinnacle of personal shield technology. Advanced fabrication techniques yield a belt whose field generator provides near-military-grade protection with rapid recharge. Tier 3 of 3.</description>
+    <statBases>
+      <Mass>3.8</Mass>
+      <WorkToMake>24000</WorkToMake>
+      <Flammability>0.28</Flammability>
+      <EnergyShieldRechargeRate>0.28</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>2.00</EnergyShieldEnergyMax>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <costList>
+      <Steel>90</Steel>
+      <Plasteel>40</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ShieldBelt_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>RM1_VitalsMonitor_T2_Research</defName>
+    <label>vitals monitor I</label>
+    <description>Improved vitals monitor with enhanced diagnostic algorithms.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>VitalsMonitor</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <researchViewX>4.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_VitalsMonitor_T4_Research</defName>
+    <label>vitals monitor II</label>
+    <description>Spacer-tech vitals monitor with molecular-level biosensors.</description>
+    <baseCost>1350</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_VitalsMonitor_T2_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <researchViewX>5.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_VitalsMonitor_T6_Research</defName>
+    <label>vitals monitor III</label>
+    <description>The pinnacle of medical monitoring technology.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_VitalsMonitor_T4_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <researchViewX>6.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+</Defs>

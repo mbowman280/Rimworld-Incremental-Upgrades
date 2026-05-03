@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- In RimWorld 1.6, DoBillsCook uses fixedBillGiverDefs — an explicit allowlist of stove
+       defNames. Any building not in this list is invisible to the Cooking WorkGiver regardless
+       of its thingClass. Add our upgraded stoves so pawns will cook at them. -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/WorkGiverDef[defName="DoBillsCook"]/fixedBillGiverDefs</xpath>
+    <value>
+      <li>RM1_ElectricStoveII</li>
+      <li>RM1_ElectricStoveIII</li>
+    </value>
+  </Operation>
+
+</Patch>

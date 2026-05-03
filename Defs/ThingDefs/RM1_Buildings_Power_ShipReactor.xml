@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Vanilla Ship_Reactor: -1000W, Steel=350, Plasteel=280, Uranium=70, CompSpacer=8, WorkToBuild=65000, size=(6,7) -->
+  <!-- Each tier: +1000W output, build costs 2x compound from vanilla -->
+
+  <!-- ===== Tier I — 2000W ===== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RM1_ShipReactor_I</defName>
+    <label>ship reactor I</label>
+    <description>An improved ship reactor with refined plasma confinement. Produces 2000W of power and enables a stronger launch burn. Tier 1 of 3.</description>
+    <thingClass>Building_ShipReactor</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/Ship/ShipReactor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(8,8)</drawSize>
+      <shadowData>
+        <volume>(5.94, 1.0, 6.71)</volume>
+      </shadowData>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <WorkToBuild>65000</WorkToBuild>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(6,7)</size>
+    <designationCategory>Ship</designationCategory>
+    <building>
+      <shipPart>true</shipPart>
+      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+    </building>
+    <costList>
+      <Steel>420</Steel>
+      <Plasteel>336</Plasteel>
+      <Uranium>84</Uranium>
+      <ComponentSpacer>9</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-2000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_ShipPart"/>
+      <li Class="CompProperties_Hibernatable">
+        <incidentTargetWhileStarting>Map_RaidBeacon</incidentTargetWhileStarting>
+        <sustainerActive>ShipReactor_Ambience</sustainerActive>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <defaultPlacingRot>East</defaultPlacingRot>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RM1_ShipReactor_T2_Research</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!-- ===== Tier II — 4000W ===== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RM1_ShipReactor_II</defName>
+    <label>ship reactor II</label>
+    <description>A spacer-era ship reactor with exotic matter fuel rods. Produces 4000W of power. Tier 2 of 3.</description>
+    <thingClass>Building_ShipReactor</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/Ship/ShipReactor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(8,8)</drawSize>
+      <shadowData>
+        <volume>(5.94, 1.0, 6.71)</volume>
+      </shadowData>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <WorkToBuild>65000</WorkToBuild>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(6,7)</size>
+    <designationCategory>Ship</designationCategory>
+    <building>
+      <shipPart>true</shipPart>
+      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+    </building>
+    <costList>
+      <Steel>605</Steel>
+      <Plasteel>484</Plasteel>
+      <Uranium>121</Uranium>
+      <ComponentSpacer>11</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-4000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_ShipPart"/>
+      <li Class="CompProperties_Hibernatable">
+        <incidentTargetWhileStarting>Map_RaidBeacon</incidentTargetWhileStarting>
+        <sustainerActive>ShipReactor_Ambience</sustainerActive>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <defaultPlacingRot>East</defaultPlacingRot>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RM1_ShipReactor_T4_Research</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!-- ===== Tier III — 6000W ===== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RM1_ShipReactor_III</defName>
+    <label>ship reactor III</label>
+    <description>The ultimate ship reactor. A controlled singularity reaction produces 6000W — an almost incomprehensible amount of power from a single device. Tier 3 of 3.</description>
+    <thingClass>Building_ShipReactor</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/Ship/ShipReactor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(8,8)</drawSize>
+      <shadowData>
+        <volume>(5.94, 1.0, 6.71)</volume>
+      </shadowData>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <WorkToBuild>65000</WorkToBuild>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(6,7)</size>
+    <designationCategory>Ship</designationCategory>
+    <building>
+      <shipPart>true</shipPart>
+      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+    </building>
+    <costList>
+      <Steel>871</Steel>
+      <Plasteel>697</Plasteel>
+      <Uranium>174</Uranium>
+      <ComponentSpacer>13</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-6000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_ShipPart"/>
+      <li Class="CompProperties_Hibernatable">
+        <incidentTargetWhileStarting>Map_RaidBeacon</incidentTargetWhileStarting>
+        <sustainerActive>ShipReactor_Ambience</sustainerActive>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <defaultPlacingRot>East</defaultPlacingRot>
+    <constructionSkillPrerequisite>14</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RM1_ShipReactor_T6_Research</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

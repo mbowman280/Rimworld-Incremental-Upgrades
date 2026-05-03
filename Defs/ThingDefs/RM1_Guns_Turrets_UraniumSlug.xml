@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseWeaponTurret" Name="RM1_UraniumSlugGun_Base" Abstract="True">
+    <defName>RM1_UraniumSlugGun_Base</defName>
+    <label>uranium slug gun</label>
+    <description>An upgraded uranium slug turret weapon assembly designed to attach to a turret.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretSniper_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <AccuracyTouch>0.22</AccuracyTouch>
+      <AccuracyShort>0.33</AccuracyShort>
+      <AccuracyMedium>0.44</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>3.2</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>40</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_UraniumSlugGun_Base">
+    <defName>RM1_Gun_UraniumSlug_Mark_I</defName><label>uranium slug gun (Mark I)</label>
+    <statBases><AccuracyMedium>0.72</AccuracyMedium><AccuracyLong>0.72</AccuracyLong></statBases>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>RM1_Slug_UraniumSlug_Mark_I</defaultProjectile><warmupTime>3.60</warmupTime><minRange>11.9</minRange><range>45.5</range><burstShotCount>1</burstShotCount><defaultCooldownTime>3.60</defaultCooldownTime><soundCast>Shot_TurretSniper</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>18</muzzleFlashScale><consumeFuelPerShot>1</consumeFuelPerShot></li></verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_UraniumSlugGun_Base">
+    <defName>RM1_Gun_UraniumSlug_Mark_II</defName><label>uranium slug gun (Mark II)</label>
+    <statBases><AccuracyMedium>0.95</AccuracyMedium><AccuracyLong>0.95</AccuracyLong></statBases>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>RM1_Slug_UraniumSlug_Mark_II</defaultProjectile><warmupTime>2.37</warmupTime><minRange>11.9</minRange><range>94.3</range><burstShotCount>1</burstShotCount><defaultCooldownTime>2.37</defaultCooldownTime><soundCast>Shot_TurretSniper</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>18</muzzleFlashScale><consumeFuelPerShot>1</consumeFuelPerShot></li></verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_UraniumSlugGun_Base">
+    <defName>RM1_Gun_UraniumSlug_Mark_III</defName><label>uranium slug gun (Mark III)</label>
+    <statBases><AccuracyMedium>0.95</AccuracyMedium><AccuracyLong>0.95</AccuracyLong></statBases>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>RM1_Slug_UraniumSlug_Mark_III</defaultProjectile><warmupTime>1.42</warmupTime><minRange>11.9</minRange><range>234.6</range><burstShotCount>1</burstShotCount><defaultCooldownTime>1.42</defaultCooldownTime><soundCast>Shot_TurretSniper</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>18</muzzleFlashScale><consumeFuelPerShot>1</consumeFuelPerShot></li></verbs>
+  </ThingDef>
+
+</Defs>

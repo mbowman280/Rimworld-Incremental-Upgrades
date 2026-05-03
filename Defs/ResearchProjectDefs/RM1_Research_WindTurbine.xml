@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>RM1_WindTurbine_T2_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>improved wind turbine</label>
+    <description>Optimized blade geometry and lower-friction bearings extract more energy from each gust of wind.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>0.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_WindTurbine_T4_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>spacer wind turbine</label>
+    <description>Aerodynamic metamaterial blades and superconducting generators push wind energy extraction to previously unattainable levels.</description>
+    <baseCost>1350</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_WindTurbine_T2_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_WindTurbine_T6_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>peak wind turbine</label>
+    <description>The ultimate wind energy system. Exotic matter rotors with zero mechanical losses represent the pinnacle of atmospheric power generation.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_WindTurbine_T4_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>2.0</researchViewX>
+    <researchViewY>3.0</researchViewY>
+  </ResearchProjectDef>
+</Defs>

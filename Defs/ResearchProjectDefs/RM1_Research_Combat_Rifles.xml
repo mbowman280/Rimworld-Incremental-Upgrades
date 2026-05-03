@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ===== Assault Rifle ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_AssaultRifle_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>assault rifle upgrade I</label>
+    <description>A free-floating barrel and improved gas system lift the assault rifle's performance above standard manufacture.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>PrecisionRifling</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>7.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_AssaultRifle_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>assault rifle upgrade II</label>
+    <description>Match-grade components and a re-profiled chamber dramatically improve accuracy and reduce felt recoil.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>RM1_AssaultRifle_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>8.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_AssaultRifle_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>assault rifle upgrade III</label>
+    <description>Advanced fabrication produces an assault rifle operating at the absolute ceiling of conventional gunpowder technology.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_AssaultRifle_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>9.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== Sniper Rifle ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_SniperRifle_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>sniper rifle upgrade I</label>
+    <description>A hand-lapped barrel and precision-bedded stock extend the sniper rifle's effective engagement range.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>PrecisionRifling</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>7.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_SniperRifle_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>sniper rifle upgrade II</label>
+    <description>Refined propellant charges and a muzzle brake assembly push the sniper rifle into extreme-range territory.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>RM1_SniperRifle_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>8.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_SniperRifle_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>sniper rifle upgrade III</label>
+    <description>Near-spacer engineering applied to the sniper rifle platform. Shots strike with terrifying force at ranges that beggar belief.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_SniperRifle_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>9.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ===== Minigun ===== -->
+  <ResearchProjectDef>
+    <defName>RM1_Minigun_I_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>minigun upgrade I</label>
+    <description>Improved rotor balancing and better barrel liners increase minigun accuracy and reduce overheating.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>MultibarrelWeapons</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>7.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_Minigun_II_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>minigun upgrade II</label>
+    <description>A high-efficiency electric motor and precision-machined barrels push the minigun's rate of fire and damage output to new heights.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>RM1_Minigun_I_Research</li></prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>8.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RM1_Minigun_III_Research</defName>
+    <tab>RM1_CombatUpgrades</tab>
+    <label>minigun upgrade III</label>
+    <description>Advanced fabrication produces a minigun with frictionless barrel rotation and near-perfect projectile alignment. A wall of lead at extreme range.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_Minigun_II_Research</li>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+    <researchViewX>9.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

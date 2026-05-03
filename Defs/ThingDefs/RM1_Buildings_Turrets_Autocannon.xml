@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="AutocannonTurret" Name="RM1_Autocannon_Base" Abstract="True">
+    <defName>RM1_Autocannon_Base</defName>
+    <statBases>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>5.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>150</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_Autocannon_Base">
+    <defName>RM1_Autocannon_Mark_I</defName>
+    <label>autocannon turret Mark I</label>
+    <description>An upgraded autocannon with improved shell feed and reinforced barrel. Tier 1 of 3.</description>
+    <statBases><MaxHitPoints>420</MaxHitPoints><Flammability>0.63</Flammability></statBases>
+    <costList><Steel>360</Steel><Plasteel>48</Plasteel><ComponentIndustrial>8</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until barrel change</fuelLabel>
+        <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+        <outOfFuelMessage>Needs new barrel</outOfFuelMessage>
+        <fuelFilter><thingDefs><li>Steel</li></thingDefs></fuelFilter>
+        <fuelCapacity>100</fuelCapacity>
+        <fuelMultiplier>0.5</fuelMultiplier>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <building><turretGunDef>RM1_Gun_Autocannon_Mark_I</turretGunDef><turretBurstCooldownTime>1.95</turretBurstCooldownTime></building>
+    <researchPrerequisites><li>RM1_Autocannon_T2_Research</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_Autocannon_Base">
+    <defName>RM1_Autocannon_Mark_II</defName>
+    <label>autocannon turret Mark II</label>
+    <description>Peak industrial engineering applied to the autocannon platform. Tier 2 of 3.</description>
+    <statBases><MaxHitPoints>871</MaxHitPoints><Flammability>0.41</Flammability></statBases>
+    <costList><Steel>460</Steel><Plasteel>58</Plasteel><ComponentIndustrial>10</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until barrel change</fuelLabel>
+        <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+        <outOfFuelMessage>Needs new barrel</outOfFuelMessage>
+        <fuelFilter><thingDefs><li>Steel</li></thingDefs></fuelFilter>
+        <fuelCapacity>140</fuelCapacity>
+        <fuelMultiplier>0.5</fuelMultiplier>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <building><turretGunDef>RM1_Gun_Autocannon_Mark_II</turretGunDef><turretBurstCooldownTime>1.28</turretBurstCooldownTime></building>
+    <researchPrerequisites><li>RM1_Autocannon_T6_Research</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_Autocannon_Base">
+    <defName>RM1_Autocannon_Mark_III</defName>
+    <label>autocannon turret Mark III</label>
+    <description>The ultimate autocannon. A spacer-grade siege weapon capable of suppressing entire battlefields. Tier 3 of 3.</description>
+    <statBases><MaxHitPoints>2167</MaxHitPoints><Flammability>0.24</Flammability></statBases>
+    <costList><Steel>660</Steel><Plasteel>70</Plasteel><ComponentIndustrial>12</ComponentIndustrial><ComponentSpacer>3</ComponentSpacer></costList>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until barrel change</fuelLabel>
+        <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+        <outOfFuelMessage>Needs new barrel</outOfFuelMessage>
+        <fuelFilter><thingDefs><li>Steel</li></thingDefs></fuelFilter>
+        <fuelCapacity>190</fuelCapacity>
+        <fuelMultiplier>0.5</fuelMultiplier>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+    <building><turretGunDef>RM1_Gun_Autocannon_Mark_III</turretGunDef><turretBurstCooldownTime>0.75</turretBurstCooldownTime></building>
+    <placeWorkers><li>PlaceWorker_TurretTop</li></placeWorkers>
+    <researchPrerequisites><li>RM1_Autocannon_T11_Research</li></researchPrerequisites>
+  </ThingDef>
+
+</Defs>

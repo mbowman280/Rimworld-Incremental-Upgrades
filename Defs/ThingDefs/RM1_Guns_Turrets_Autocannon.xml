@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseWeaponTurret" Name="RM1_AutocannonGun_Base" Abstract="True">
+    <defName>RM1_AutocannonGun_Base</defName>
+    <label>autocannon</label>
+    <description>An upgraded autocannon weapon assembly designed to attach to a turret.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretAutocannon_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <AccuracyTouch>0.28</AccuracyTouch>
+      <AccuracyShort>0.72</AccuracyShort>
+      <AccuracyMedium>0.66</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>40</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_AutocannonGun_Base">
+    <defName>RM1_Gun_Autocannon_Mark_I</defName><label>autocannon (Mark I)</label>
+    <statBases><AccuracyShort>0.87</AccuracyShort><AccuracyMedium>0.79</AccuracyMedium><AccuracyLong>0.59</AccuracyLong></statBases>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>RM1_Shell_Autocannon_Mark_I</defaultProjectile><warmupTime>0</warmupTime><minRange>8.9</minRange><range>34.7</range><burstShotCount>4</burstShotCount><ticksBetweenBurstShots>8</ticksBetweenBurstShots><defaultCooldownTime>1.95</defaultCooldownTime><soundCast>Shot_Autocannon</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>12</muzzleFlashScale><consumeFuelPerShot>1</consumeFuelPerShot></li></verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_AutocannonGun_Base">
+    <defName>RM1_Gun_Autocannon_Mark_II</defName><label>autocannon (Mark II)</label>
+    <statBases><AccuracyShort>0.95</AccuracyShort><AccuracyMedium>0.95</AccuracyMedium><AccuracyLong>0.87</AccuracyLong></statBases>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>RM1_Shell_Autocannon_Mark_II</defaultProjectile><warmupTime>0</warmupTime><minRange>8.9</minRange><range>71.9</range><burstShotCount>8</burstShotCount><ticksBetweenBurstShots>5</ticksBetweenBurstShots><defaultCooldownTime>1.28</defaultCooldownTime><soundCast>Shot_Autocannon</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>12</muzzleFlashScale><consumeFuelPerShot>1</consumeFuelPerShot></li></verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_AutocannonGun_Base">
+    <defName>RM1_Gun_Autocannon_Mark_III</defName><label>autocannon (Mark III)</label>
+    <statBases><AccuracyShort>0.95</AccuracyShort><AccuracyMedium>0.95</AccuracyMedium><AccuracyLong>0.95</AccuracyLong></statBases>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>RM1_Shell_Autocannon_Mark_III</defaultProjectile><warmupTime>0</warmupTime><minRange>8.9</minRange><range>179.0</range><burstShotCount>13</burstShotCount><ticksBetweenBurstShots>5</ticksBetweenBurstShots><defaultCooldownTime>0.75</defaultCooldownTime><soundCast>Shot_Autocannon</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>12</muzzleFlashScale><consumeFuelPerShot>1</consumeFuelPerShot></li></verbs>
+  </ThingDef>
+
+</Defs>

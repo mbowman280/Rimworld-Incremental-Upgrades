@@ -1,0 +1,10 @@
+# Claude Code project files
+.claude/
+.clauderc
+
+# Working notes
+tofix.txt
+
+# OS
+.DS_Store
+Thumbs.db

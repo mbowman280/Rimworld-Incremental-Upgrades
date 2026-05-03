@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet" Name="RM1_UraniumSlugProjectile_Base" Abstract="True">
+    <defName>RM1_UraniumSlugProjectile_Base</defName>
+    <label>uranium slug</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <speed>120</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_UraniumSlugProjectile_Base">
+    <defName>RM1_Slug_UraniumSlug_Mark_I</defName><label>uranium slug (Mark I)</label>
+    <projectile><damageAmountBase>78</damageAmountBase><armorPenetrationBase>1.00</armorPenetrationBase></projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_UraniumSlugProjectile_Base">
+    <defName>RM1_Slug_UraniumSlug_Mark_II</defName><label>uranium slug (Mark II)</label>
+    <projectile><damageAmountBase>163</damageAmountBase><armorPenetrationBase>1.00</armorPenetrationBase></projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="RM1_UraniumSlugProjectile_Base">
+    <defName>RM1_Slug_UraniumSlug_Mark_III</defName><label>uranium slug (Mark III)</label>
+    <projectile><damageAmountBase>406</damageAmountBase><armorPenetrationBase>1.00</armorPenetrationBase></projectile>
+  </ThingDef>
+
+</Defs>

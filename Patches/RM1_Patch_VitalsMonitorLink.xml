@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Hospital beds only list vanilla VitalsMonitor in their linkableFacilities.         -->
+  <!-- Our upgrade defs (RM1_VitalsMonitor_I through III) must be patched in here,        -->
+  <!-- otherwise CompProperties_AffectedByFacilities never registers them and the         -->
+  <!-- monitor shows "(inactive)" even when placed adjacent to the bed.                   -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HospitalBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+    <value>
+      <li>RM1_VitalsMonitor_I</li>
+      <li>RM1_VitalsMonitor_II</li>
+      <li>RM1_VitalsMonitor_III</li>
+    </value>
+  </Operation>
+
+</Patch>

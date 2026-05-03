@@ -1,0 +1,2044 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- =========================================================
+       BIONIC ARM UPGRADES
+       Vanilla: partEfficiency=1.25, fist power=12
+       Tier I: 1.50 / II: 1.75 / III: 2.00
+       Fist power: 14 / 17 / 19
+       Cost: Plasteel=15, CompSpacer +1 per tier (5/6/7)
+       WTM: 32500 / 39000 / 45500
+  ========================================================= -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicArm_I</defName>
+    <label>bionic arm (Mark I)</label>
+    <labelNoun>a bionic arm (Mark I)</labelNoun>
+    <description>An enhanced bionic arm. Improved servo motors and biogel nerve-link provide greater strength and precision than a standard bionic arm. A lattice-dust healing system allows it to recover from damage.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicArm_I</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>14</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>RM1_BionicArm_I</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicArm_I</defName>
+    <label>bionic arm (Mark I)</label>
+    <description>An enhanced bionic arm at 150% efficiency. Improved servo motors and biogel nerve-link provide greater strength and precision than a standard bionic arm.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicArm_I</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>5</Mass>
+      <WorkToMake>32500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicArm_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicArm_I</defName>
+    <label>install bionic arm (Mark I)</label>
+    <description>Install a bionic arm (Mark I).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicArm_I</ThingDef>
+      <HediffDef>RM1_BionicArm_I</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic arm (Mark I).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicArm_I</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicArm_I</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicArm_I</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicArm_II</defName>
+    <label>bionic arm (Mark II)</label>
+    <labelNoun>a bionic arm (Mark II)</labelNoun>
+    <description>An advanced bionic arm at 175% efficiency. Precision micro-servo arrays and an enhanced biogel lattice deliver substantially superior strength and control.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicArm_II</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>17</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>RM1_BionicArm_II</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.75</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicArm_II</defName>
+    <label>bionic arm (Mark II)</label>
+    <description>An advanced bionic arm at 175% efficiency. Precision micro-servo arrays and an enhanced biogel lattice deliver substantially superior strength and control.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicArm_II</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>5</Mass>
+      <WorkToMake>39000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicArm_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicArm_II</defName>
+    <label>install bionic arm (Mark II)</label>
+    <description>Install a bionic arm (Mark II).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicArm_II</ThingDef>
+      <HediffDef>RM1_BionicArm_II</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic arm (Mark II).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicArm_II</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicArm_II</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicArm_II</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicArm_III</defName>
+    <label>bionic arm (Mark III)</label>
+    <labelNoun>a bionic arm (Mark III)</labelNoun>
+    <description>The pinnacle bionic arm at 200% efficiency. Full-spectrum biogel integration and precision-fabricated servos grant strength and control far beyond any biological limb.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicArm_III</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>19</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>RM1_BionicArm_III</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>2.00</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicArm_III</defName>
+    <label>bionic arm (Mark III)</label>
+    <description>The pinnacle bionic arm at 200% efficiency. Full-spectrum biogel integration and precision-fabricated servos grant strength and control far beyond any biological limb.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicArm_III</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>7</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>5</Mass>
+      <WorkToMake>45500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicArm_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicArm_III</defName>
+    <label>install bionic arm (Mark III)</label>
+    <description>Install a bionic arm (Mark III).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicArm_III</ThingDef>
+      <HediffDef>RM1_BionicArm_III</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic arm (Mark III).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicArm_III</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicArm_III</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicArm_III</addsHediff>
+  </RecipeDef>
+  <!-- =========================================================
+       BIONIC EYE UPGRADES
+       Vanilla: partEfficiency=1.25
+       Tier I: 1.50 / II: 1.75 / III: 2.00
+       Cost: Plasteel=15, CompSpacer 5/6/7
+       WTM: 32500 / 39000 / 45500
+  ========================================================= -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicEye_I</defName>
+    <label>bionic eye (Mark I)</label>
+    <labelNoun>a bionic eye (Mark I)</labelNoun>
+    <description>An enhanced bionic eye at 150% efficiency. Improved wide-spectrum sensors and signal pre-processing deliver sharper vision than a standard bionic eye. A lattice-dust healing system allows it to recover from damage.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicEye_I</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicEye_I</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <renderNodeProperties>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <workerClass>PawnRenderNodeWorker_HediffEye</workerClass>
+        <texPath>Things/Pawn/Wounds/BionicEye</texPath>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.15</drawSize>
+        <drawData>
+          <defaultData>
+            <layer>56</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+          <dataWest>
+            <flip>true</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicEye_I</defName>
+    <label>bionic eye (Mark I)</label>
+    <description>An enhanced bionic eye at 150% efficiency. Improved wide-spectrum sensors and signal pre-processing deliver sharper vision than a standard bionic eye.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicEye_I</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>0.3</Mass>
+      <WorkToMake>32500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicEye_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicEye_I</defName>
+    <label>install bionic eye (Mark I)</label>
+    <description>Install a bionic eye (Mark I).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicEye_I</ThingDef>
+      <HediffDef>RM1_BionicEye_I</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic eye (Mark I).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicEye_I</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicEye_I</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Eye</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicEye_I</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicEye_II</defName>
+    <label>bionic eye (Mark II)</label>
+    <labelNoun>a bionic eye (Mark II)</labelNoun>
+    <description>An advanced bionic eye at 175% efficiency. Multi-layer sensor arrays and advanced neural pre-processing give remarkable visual acuity far beyond the biological eye.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicEye_II</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicEye_II</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.75</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <renderNodeProperties>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <workerClass>PawnRenderNodeWorker_HediffEye</workerClass>
+        <texPath>Things/Pawn/Wounds/BionicEye</texPath>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.15</drawSize>
+        <drawData>
+          <defaultData>
+            <layer>56</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+          <dataWest>
+            <flip>true</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicEye_II</defName>
+    <label>bionic eye (Mark II)</label>
+    <description>An advanced bionic eye at 175% efficiency. Multi-layer sensor arrays and advanced neural pre-processing give remarkable visual acuity.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicEye_II</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>0.3</Mass>
+      <WorkToMake>39000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicEye_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicEye_II</defName>
+    <label>install bionic eye (Mark II)</label>
+    <description>Install a bionic eye (Mark II).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicEye_II</ThingDef>
+      <HediffDef>RM1_BionicEye_II</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic eye (Mark II).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicEye_II</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicEye_II</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Eye</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicEye_II</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicEye_III</defName>
+    <label>bionic eye (Mark III)</label>
+    <labelNoun>a bionic eye (Mark III)</labelNoun>
+    <description>The pinnacle bionic eye at 200% efficiency. Near-perfect visual acuity across all spectra with predictive signal enhancement — the ultimate in artificial vision.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicEye_III</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicEye_III</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>2.00</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <renderNodeProperties>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <workerClass>PawnRenderNodeWorker_HediffEye</workerClass>
+        <texPath>Things/Pawn/Wounds/BionicEye</texPath>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.15</drawSize>
+        <drawData>
+          <defaultData>
+            <layer>56</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+          <dataWest>
+            <flip>true</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicEye_III</defName>
+    <label>bionic eye (Mark III)</label>
+    <description>The pinnacle bionic eye at 200% efficiency. Near-perfect visual acuity across all spectra with predictive signal enhancement.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicEye_III</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>7</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>0.3</Mass>
+      <WorkToMake>45500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicEye_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicEye_III</defName>
+    <label>install bionic eye (Mark III)</label>
+    <description>Install a bionic eye (Mark III).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicEye_III</ThingDef>
+      <HediffDef>RM1_BionicEye_III</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic eye (Mark III).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicEye_III</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicEye_III</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Eye</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicEye_III</addsHediff>
+  </RecipeDef>
+  <!-- =========================================================
+       BIONIC EAR UPGRADES
+       Vanilla: partEfficiency=1.25
+       Tier I: 1.50 / II: 1.75 / III: 2.00
+       Cost: Plasteel=10, CompSpacer 4/5/6
+       WTM: 32500 / 39000 / 45500
+  ========================================================= -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicEar_I</defName>
+    <label>bionic ear (Mark I)</label>
+    <labelNoun>a bionic ear (Mark I)</labelNoun>
+    <description>An enhanced bionic ear at 150% efficiency. Improved subdermal microphones and biogel nerve interface deliver sharper and more precise hearing than a standard bionic ear.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicEar_I</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicEar_I</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicEar_I</defName>
+    <label>bionic ear (Mark I)</label>
+    <description>An enhanced bionic ear implant at 150% efficiency. Improved subdermal microphones and biogel nerve interface deliver sharper and more precise hearing.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicEar_I</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <WorkToMake>32500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicEar_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicEar_I</defName>
+    <label>install bionic ear (Mark I)</label>
+    <description>Install a bionic ear (Mark I).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicEar_I</ThingDef>
+      <HediffDef>RM1_BionicEar_I</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic ear (Mark I).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicEar_I</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicEar_I</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Ear</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicEar_I</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicEar_II</defName>
+    <label>bionic ear (Mark II)</label>
+    <labelNoun>a bionic ear (Mark II)</labelNoun>
+    <description>An advanced bionic ear at 175% efficiency. Directional microphone arrays and enhanced biogel nerve coupling provide extraordinary hearing with pinpoint sound localization.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicEar_II</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicEar_II</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.75</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicEar_II</defName>
+    <label>bionic ear (Mark II)</label>
+    <description>An advanced bionic ear implant at 175% efficiency. Directional microphone arrays and enhanced biogel nerve coupling provide extraordinary hearing.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicEar_II</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <WorkToMake>39000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicEar_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicEar_II</defName>
+    <label>install bionic ear (Mark II)</label>
+    <description>Install a bionic ear (Mark II).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicEar_II</ThingDef>
+      <HediffDef>RM1_BionicEar_II</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic ear (Mark II).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicEar_II</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicEar_II</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Ear</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicEar_II</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicEar_III</defName>
+    <label>bionic ear (Mark III)</label>
+    <labelNoun>a bionic ear (Mark III)</labelNoun>
+    <description>The pinnacle bionic ear at 200% efficiency. Superhuman hearing range, perfect noise cancellation, and real-time audio analysis — the ultimate artificial ear.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicEar_III</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicEar_III</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>2.00</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicEar_III</defName>
+    <label>bionic ear (Mark III)</label>
+    <description>The pinnacle bionic ear implant at 200% efficiency. Superhuman hearing range, perfect noise cancellation, and real-time audio analysis.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicEar_III</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <WorkToMake>45500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicEar_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicEar_III</defName>
+    <label>install bionic ear (Mark III)</label>
+    <description>Install a bionic ear (Mark III).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicEar_III</ThingDef>
+      <HediffDef>RM1_BionicEar_III</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic ear (Mark III).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicEar_III</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicEar_III</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Ear</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicEar_III</addsHediff>
+  </RecipeDef>
+  <!-- =========================================================
+       BIONIC HEART UPGRADES
+       Vanilla: partEfficiency=1.25
+       Tier I: 1.50 / II: 1.75 / III: 2.00
+       Cost: Plasteel=15, CompSpacer 5/6/7
+       WTM: 32500 / 39000 / 45500
+  ========================================================= -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicHeart_I</defName>
+    <label>bionic heart (Mark I)</label>
+    <labelNoun>a bionic heart (Mark I)</labelNoun>
+    <description>An enhanced bionic heart at 150% efficiency. Improved synthetic muscle fibers and a high-flow pump chamber deliver superior circulation under all conditions.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicHeart_I</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicHeart_I</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicHeart_I</defName>
+    <label>bionic heart (Mark I)</label>
+    <description>An enhanced bionic heart at 150% efficiency. Improved synthetic muscle fibers and a high-flow pump chamber deliver superior circulation.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicHeart_I</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <WorkToMake>32500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicHeart_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicHeart_I</defName>
+    <label>install bionic heart (Mark I)</label>
+    <description>Install a bionic heart (Mark I).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicHeart_I</ThingDef>
+      <HediffDef>RM1_BionicHeart_I</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic heart (Mark I).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicHeart_I</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicHeart_I</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicHeart_I</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicHeart_II</defName>
+    <label>bionic heart (Mark II)</label>
+    <labelNoun>a bionic heart (Mark II)</labelNoun>
+    <description>An advanced bionic heart at 175% efficiency. Adaptive synthetic muscle fibers and an optimized multi-chamber pump provide exceptional cardiovascular output.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicHeart_II</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicHeart_II</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.75</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicHeart_II</defName>
+    <label>bionic heart (Mark II)</label>
+    <description>An advanced bionic heart at 175% efficiency. Adaptive synthetic muscle fibers and an optimized multi-chamber pump provide exceptional cardiovascular output.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicHeart_II</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <WorkToMake>39000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicHeart_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicHeart_II</defName>
+    <label>install bionic heart (Mark II)</label>
+    <description>Install a bionic heart (Mark II).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicHeart_II</ThingDef>
+      <HediffDef>RM1_BionicHeart_II</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic heart (Mark II).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicHeart_II</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicHeart_II</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicHeart_II</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicHeart_III</defName>
+    <label>bionic heart (Mark III)</label>
+    <labelNoun>a bionic heart (Mark III)</labelNoun>
+    <description>The pinnacle bionic heart at 200% efficiency. Precision-fabricated pump geometry with maximum-throughput synthetic muscle delivers unmatched cardiovascular performance.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicHeart_III</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicHeart_III</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>2.00</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicHeart_III</defName>
+    <label>bionic heart (Mark III)</label>
+    <description>The pinnacle bionic heart at 200% efficiency. Precision-fabricated pump geometry with maximum-throughput synthetic muscle delivers unmatched cardiovascular performance.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicHeart_III</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>7</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <WorkToMake>45500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicHeart_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicHeart_III</defName>
+    <label>install bionic heart (Mark III)</label>
+    <description>Install a bionic heart (Mark III).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicHeart_III</ThingDef>
+      <HediffDef>RM1_BionicHeart_III</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic heart (Mark III).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicHeart_III</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicHeart_III</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicHeart_III</addsHediff>
+  </RecipeDef>
+  <!-- =========================================================
+       BIONIC LEG UPGRADES
+       Vanilla: partEfficiency=1.25
+       Tier I: 1.50 / II: 1.75 / III: 2.00
+       Cost: Plasteel=15, CompSpacer 5/6/7
+       WTM: 32500 / 39000 / 45500
+  ========================================================= -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicLeg_I</defName>
+    <label>bionic leg (Mark I)</label>
+    <labelNoun>a bionic leg (Mark I)</labelNoun>
+    <description>An enhanced bionic leg at 150% efficiency. Improved servo output and nerve-link responsiveness deliver greater speed and stability than a standard bionic leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicLeg_I</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicLeg_I</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicLeg_I</defName>
+    <label>bionic leg (Mark I)</label>
+    <description>An enhanced bionic leg at 150% efficiency. Improved servo output and nerve-link responsiveness deliver greater speed and stability.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicLeg_I</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+      <WorkToMake>32500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicLeg_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicLeg_I</defName>
+    <label>install bionic leg (Mark I)</label>
+    <description>Install a bionic leg (Mark I).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicLeg_I</ThingDef>
+      <HediffDef>RM1_BionicLeg_I</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic leg (Mark I).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicLeg_I</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicLeg_I</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicLeg_I</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicLeg_II</defName>
+    <label>bionic leg (Mark II)</label>
+    <labelNoun>a bionic leg (Mark II)</labelNoun>
+    <description>An advanced bionic leg at 175% efficiency. High-torque servo clusters and reinforced plasteel joint structures provide remarkable locomotion capability.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicLeg_II</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicLeg_II</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.75</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicLeg_II</defName>
+    <label>bionic leg (Mark II)</label>
+    <description>An advanced bionic leg at 175% efficiency. High-torque servo clusters and reinforced plasteel joint structures provide remarkable locomotion.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicLeg_II</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+      <WorkToMake>39000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicLeg_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicLeg_II</defName>
+    <label>install bionic leg (Mark II)</label>
+    <description>Install a bionic leg (Mark II).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicLeg_II</ThingDef>
+      <HediffDef>RM1_BionicLeg_II</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic leg (Mark II).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicLeg_II</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicLeg_II</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicLeg_II</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicLeg_III</defName>
+    <label>bionic leg (Mark III)</label>
+    <labelNoun>a bionic leg (Mark III)</labelNoun>
+    <description>The pinnacle bionic leg at 200% efficiency. Precision-balanced articulation with maximum-output servo motors delivers unmatched speed and agility far beyond any biological leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicLeg_III</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicLeg_III</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>2.00</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicLeg_III</defName>
+    <label>bionic leg (Mark III)</label>
+    <description>The pinnacle bionic leg at 200% efficiency. Precision-balanced articulation with maximum-output servo motors delivers unmatched speed and agility.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicLeg_III</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>7</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+      <WorkToMake>45500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicLeg_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicLeg_III</defName>
+    <label>install bionic leg (Mark III)</label>
+    <description>Install a bionic leg (Mark III).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicLeg_III</ThingDef>
+      <HediffDef>RM1_BionicLeg_III</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic leg (Mark III).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicLeg_III</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicLeg_III</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicLeg_III</addsHediff>
+  </RecipeDef>
+  <!-- =========================================================
+       BIONIC SPINE UPGRADES
+       Vanilla: betterThanNatural only (no partEfficiency = effective 1.0)
+       Tier I: 1.25 / II: 1.50 / III: 1.75
+       Cost: Plasteel=15, CompSpacer 5/6/7, Mass=2
+       WTM: 32500 / 39000 / 45500
+  ========================================================= -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicSpine_I</defName>
+    <label>bionic spine (Mark I)</label>
+    <labelNoun>a bionic spine (Mark I)</labelNoun>
+    <description>An enhanced bionic spine at 125% efficiency. An improved biogel nerve bundle running through a precision-articulated plasteel core now outperforms a biological spine in neural throughput.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicSpine_I</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicSpine_I</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.25</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicSpine_I</defName>
+    <label>bionic spine (Mark I)</label>
+    <description>An enhanced bionic spine at 125% efficiency. Improved biogel nerve bundle and articulated core now exceed natural spine performance.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicSpine_I</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>2</Mass>
+      <WorkToMake>32500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicSpine_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicSpine_I</defName>
+    <label>install bionic spine (Mark I)</label>
+    <description>Install a bionic spine (Mark I).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicSpine_I</ThingDef>
+      <HediffDef>RM1_BionicSpine_I</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic spine (Mark I).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicSpine_I</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicSpine_I</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicSpine_I</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicSpine_II</defName>
+    <label>bionic spine (Mark II)</label>
+    <labelNoun>a bionic spine (Mark II)</labelNoun>
+    <description>An advanced bionic spine at 150% efficiency. Reinforced vertebral segments and enhanced neural signal routing provide superior spinal function and stability.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicSpine_II</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicSpine_II</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicSpine_II</defName>
+    <label>bionic spine (Mark II)</label>
+    <description>An advanced bionic spine at 150% efficiency. Reinforced vertebral segments and enhanced neural signal routing.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicSpine_II</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>2</Mass>
+      <WorkToMake>39000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicSpine_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicSpine_II</defName>
+    <label>install bionic spine (Mark II)</label>
+    <description>Install a bionic spine (Mark II).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicSpine_II</ThingDef>
+      <HediffDef>RM1_BionicSpine_II</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic spine (Mark II).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicSpine_II</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicSpine_II</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicSpine_II</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicSpine_III</defName>
+    <label>bionic spine (Mark III)</label>
+    <labelNoun>a bionic spine (Mark III)</labelNoun>
+    <description>The ultimate bionic spine at 175% efficiency. A fully optimized spinal column with maximum neural throughput and complete structural integrity.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicSpine_III</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicSpine_III</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.75</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicSpine_III</defName>
+    <label>bionic spine (Mark III)</label>
+    <description>The ultimate bionic spine at 175% efficiency. Fully optimized spinal column with maximum neural throughput.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicSpine_III</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>7</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>2</Mass>
+      <WorkToMake>45500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicSpine_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicSpine_III</defName>
+    <label>install bionic spine (Mark III)</label>
+    <description>Install a bionic spine (Mark III).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicSpine_III</ThingDef>
+      <HediffDef>RM1_BionicSpine_III</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic spine (Mark III).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicSpine_III</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicSpine_III</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicSpine_III</addsHediff>
+  </RecipeDef>
+  <!-- =========================================================
+       BIONIC STOMACH UPGRADES
+       Vanilla: partEfficiency=1.25, foodPoisoningChanceFactor=0.5, GutWorms immune
+       Tier I: 1.50, factor=0.25 / II: 1.75, factor=0.10 / III: 2.00, factor=0.00
+       Cost: Plasteel=10, CompSpacer 4/5/6, Mass=2
+       WTM: 32500 / 39000 / 45500
+  ========================================================= -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicStomach_I</defName>
+    <label>bionic stomach (Mark I)</label>
+    <labelNoun>a bionic stomach (Mark I)</labelNoun>
+    <description>An enhanced bionic stomach at 150% efficiency. Improved chemical synthesizers dramatically reduce food poisoning risk and maintain full immunity to gut diseases.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicStomach_I</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicStomach_I</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <makeImmuneTo>
+          <li>GutWorms</li>
+        </makeImmuneTo>
+        <foodPoisoningChanceFactor>0.25</foodPoisoningChanceFactor>
+      </li>
+    </stages>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicStomach_I</defName>
+    <label>bionic stomach (Mark I)</label>
+    <description>An enhanced bionic stomach at 150% efficiency. Improved chemical synthesizers dramatically reduce food poisoning risk while maintaining immunity to gut diseases.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicStomach_I</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>2</Mass>
+      <WorkToMake>32500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicStomach_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicStomach_I</defName>
+    <label>install bionic stomach (Mark I)</label>
+    <description>Install a bionic stomach (Mark I).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicStomach_I</ThingDef>
+      <HediffDef>RM1_BionicStomach_I</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic stomach (Mark I).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicStomach_I</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicStomach_I</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Stomach</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicStomach_I</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicStomach_II</defName>
+    <label>bionic stomach (Mark II)</label>
+    <labelNoun>a bionic stomach (Mark II)</labelNoun>
+    <description>An advanced bionic stomach at 175% efficiency. Advanced toxin filtration arrays reduce food poisoning to near-zero. Fully immune to all gut diseases.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicStomach_II</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicStomach_II</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <makeImmuneTo>
+          <li>GutWorms</li>
+        </makeImmuneTo>
+        <foodPoisoningChanceFactor>0.10</foodPoisoningChanceFactor>
+      </li>
+    </stages>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.75</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicStomach_II</defName>
+    <label>bionic stomach (Mark II)</label>
+    <description>An advanced bionic stomach at 175% efficiency. Advanced toxin filtration reduces food poisoning to near-zero with full immunity to gut diseases.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicStomach_II</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>2</Mass>
+      <WorkToMake>39000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicStomach_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicStomach_II</defName>
+    <label>install bionic stomach (Mark II)</label>
+    <description>Install a bionic stomach (Mark II).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicStomach_II</ThingDef>
+      <HediffDef>RM1_BionicStomach_II</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic stomach (Mark II).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicStomach_II</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicStomach_II</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Stomach</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicStomach_II</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicStomach_III</defName>
+    <label>bionic stomach (Mark III)</label>
+    <labelNoun>a bionic stomach (Mark III)</labelNoun>
+    <description>The ultimate bionic stomach at 200% efficiency. Complete immunity to food poisoning and total pathogen neutralization. No edible substance can cause illness.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicStomach_III</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicStomach_III</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <makeImmuneTo>
+          <li>GutWorms</li>
+        </makeImmuneTo>
+        <foodPoisoningChanceFactor>0.00</foodPoisoningChanceFactor>
+      </li>
+    </stages>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>2.00</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicStomach_III</defName>
+    <label>bionic stomach (Mark III)</label>
+    <description>The ultimate bionic stomach at 200% efficiency. Complete immunity to food poisoning and total pathogen neutralization.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicStomach_III</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>2</Mass>
+      <WorkToMake>45500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicStomach_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicStomach_III</defName>
+    <label>install bionic stomach (Mark III)</label>
+    <description>Install a bionic stomach (Mark III).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicStomach_III</ThingDef>
+      <HediffDef>RM1_BionicStomach_III</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic stomach (Mark III).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicStomach_III</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicStomach_III</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Stomach</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicStomach_III</addsHediff>
+  </RecipeDef>
+  <!-- =========================================================
+       BIONIC JAW UPGRADES
+       Vanilla: partEfficiency=1.25
+       Tier I: 1.50 / II: 1.75 / III: 2.00
+       Cost: Plasteel=10, CompSpacer 4/5/6, Mass=1.5
+       WTM: 32500 / 39000 / 45500
+  ========================================================= -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicJaw_I</defName>
+    <label>bionic jaw (Mark I)</label>
+    <labelNoun>a bionic jaw (Mark I)</labelNoun>
+    <description>An enhanced bionic jaw at 150% efficiency. Improved micro-servomotors and optimized biosynthetic bone structure provide superior jaw function and bite force.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicJaw_I</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicJaw_I</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicJaw_I</defName>
+    <label>bionic jaw (Mark I)</label>
+    <description>An enhanced bionic jaw at 150% efficiency. Improved micro-servomotors and optimized biosynthetic bone structure provide superior jaw function.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicJaw_I</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>1.5</Mass>
+      <WorkToMake>32500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicJaw_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicJaw_I</defName>
+    <label>install bionic jaw (Mark I)</label>
+    <description>Install a bionic jaw (Mark I).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicJaw_I</ThingDef>
+      <HediffDef>RM1_BionicJaw_I</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic jaw (Mark I).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicJaw_I</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicJaw_I</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Jaw</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicJaw_I</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicJaw_II</defName>
+    <label>bionic jaw (Mark II)</label>
+    <labelNoun>a bionic jaw (Mark II)</labelNoun>
+    <description>An advanced bionic jaw at 175% efficiency. Enhanced micro-servomotor arrays and precision-milled plasteel teeth provide remarkable jaw performance.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicJaw_II</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicJaw_II</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.75</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicJaw_II</defName>
+    <label>bionic jaw (Mark II)</label>
+    <description>An advanced bionic jaw at 175% efficiency. Enhanced micro-servomotor arrays and precision-milled plasteel teeth provide remarkable jaw performance.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicJaw_II</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>1.5</Mass>
+      <WorkToMake>39000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicJaw_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicJaw_II</defName>
+    <label>install bionic jaw (Mark II)</label>
+    <description>Install a bionic jaw (Mark II).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicJaw_II</ThingDef>
+      <HediffDef>RM1_BionicJaw_II</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic jaw (Mark II).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicJaw_II</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicJaw_II</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Jaw</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicJaw_II</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicJaw_III</defName>
+    <label>bionic jaw (Mark III)</label>
+    <labelNoun>a bionic jaw (Mark III)</labelNoun>
+    <description>The apex bionic jaw at 200% efficiency. Full-range articulation with precision-milled components, maximum bite force, and flawless speech capability.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicJaw_III</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicJaw_III</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>2.00</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicJaw_III</defName>
+    <label>bionic jaw (Mark III)</label>
+    <description>The apex bionic jaw at 200% efficiency. Full-range articulation with precision-milled components and maximum bite force.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicJaw_III</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>1.5</Mass>
+      <WorkToMake>45500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicJaw_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicJaw_III</defName>
+    <label>install bionic jaw (Mark III)</label>
+    <description>Install a bionic jaw (Mark III).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicJaw_III</ThingDef>
+      <HediffDef>RM1_BionicJaw_III</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic jaw (Mark III).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicJaw_III</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicJaw_III</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Jaw</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicJaw_III</addsHediff>
+  </RecipeDef>
+  <!-- =========================================================
+       BIONIC TONGUE UPGRADES
+       Vanilla: partEfficiency=1.0 (matches natural, no betterThanNatural)
+       Tier I: 1.25 / II: 1.50 / III: 1.75
+       Cost: Plasteel=8, CompSpacer 3/4/5
+       WTM: 32500 / 39000 / 45500
+  ========================================================= -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicTongue_I</defName>
+    <label>bionic tongue (Mark I)</label>
+    <labelNoun>a bionic tongue (Mark I)</labelNoun>
+    <description>An enhanced bionic tongue at 125% efficiency. Improved smooth-fiber musculature and neurogel coupling exceed natural tongue performance in articulation and sensory response.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicTongue_I</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicTongue_I</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.25</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicTongue_I</defName>
+    <label>bionic tongue (Mark I)</label>
+    <description>An enhanced bionic tongue at 125% efficiency. Improved smooth-fiber musculature and neurogel coupling exceed natural tongue performance.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicTongue_I</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>8</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <WorkToMake>32500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicTongue_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicTongue_I</defName>
+    <label>install bionic tongue (Mark I)</label>
+    <description>Install a bionic tongue (Mark I).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicTongue_I</ThingDef>
+      <HediffDef>RM1_BionicTongue_I</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic tongue (Mark I).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicTongue_I</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicTongue_I</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Tongue</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicTongue_I</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicTongue_II</defName>
+    <label>bionic tongue (Mark II)</label>
+    <labelNoun>a bionic tongue (Mark II)</labelNoun>
+    <description>An advanced bionic tongue at 150% efficiency. Refined smooth-fiber musculature and enhanced neural coupling provide noticeably superior speech and sensory capability.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicTongue_II</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicTongue_II</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicTongue_II</defName>
+    <label>bionic tongue (Mark II)</label>
+    <description>An advanced bionic tongue at 150% efficiency. Refined smooth-fiber musculature and enhanced neural coupling provide superior speech and sensory capability.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicTongue_II</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>8</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <WorkToMake>39000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicTongue_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicTongue_II</defName>
+    <label>install bionic tongue (Mark II)</label>
+    <description>Install a bionic tongue (Mark II).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicTongue_II</ThingDef>
+      <HediffDef>RM1_BionicTongue_II</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic tongue (Mark II).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicTongue_II</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicTongue_II</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Tongue</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicTongue_II</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RM1_BionicTongue_III</defName>
+    <label>bionic tongue (Mark III)</label>
+    <labelNoun>a bionic tongue (Mark III)</labelNoun>
+    <description>The apex bionic tongue at 175% efficiency. Fully articulated synthetic fiber network with maximum sensory fidelity and flawless speech production.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicTongue_III</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>RM1_BionicTongue_III</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.75</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>RM1_BionicTongue_III</defName>
+    <label>bionic tongue (Mark III)</label>
+    <description>The apex bionic tongue at 175% efficiency. Fully articulated synthetic fiber network with maximum sensory fidelity and flawless speech production.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>RM1_InstallBionicTongue_III</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Plasteel>8</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <WorkToMake>45500</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RM1_BionicTongue_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>RM1_InstallBionicTongue_III</defName>
+    <label>install bionic tongue (Mark III)</label>
+    <description>Install a bionic tongue (Mark III).</description>
+    <descriptionHyperlinks>
+      <ThingDef>RM1_BionicTongue_III</ThingDef>
+      <HediffDef>RM1_BionicTongue_III</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic tongue (Mark III).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RM1_BionicTongue_III</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RM1_BionicTongue_III</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Tongue</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RM1_BionicTongue_III</addsHediff>
+  </RecipeDef>
+</Defs>

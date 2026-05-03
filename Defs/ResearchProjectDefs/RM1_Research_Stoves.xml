@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- StoveII: Industrial (HiTechResearchBench) -->
+  <!-- StoveIII: Spacer (HiTechResearchBench + MultiAnalyzer) -->
+  <ResearchProjectDef>
+    <defName>RM1_StoveII_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>improved electric stove</label>
+    <description>Refined heat distribution and better ingredient preparation techniques allow for more nutritious meals with less waste.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>0.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_StoveIII_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>advanced electric stove</label>
+    <description>Precision temperature control and molecular gastronomy techniques push meal quality to the limits of current technology.</description>
+    <baseCost>3500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_StoveII_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>2.0</researchViewY>
+  </ResearchProjectDef>
+</Defs>

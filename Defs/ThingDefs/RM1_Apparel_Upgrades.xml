@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ================================================================ -->
+  <!--  FLAK VEST                                                        -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="ArmorMachineableBase" Name="RM1_FlakVest_Base" Abstract="True">
+    <defName>RM1_FlakVest_Base</defName>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>IndustrialMilitaryBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_FlakVest_Base">
+    <defName>RM1_FlakVest_I</defName>
+    <label>flak vest (Mark I)</label>
+    <description>An improved flak vest. Harder ceramic inserts and a reinforced carrier improve resistance to ballistic impacts. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>10800</WorkToMake>
+      <MaxHitPoints>240</MaxHitPoints>
+      <Mass>3.2</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.43</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.32</ArmorRating_Heat>
+      <Insulation_Cold>1.2</Insulation_Cold>
+      <EquipDelay>4.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Cloth>30</Cloth>
+      <Steel>72</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_FlakVest_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_FlakVest_Base">
+    <defName>RM1_FlakVest_II</defName>
+    <label>flak vest (Mark II)</label>
+    <description>A further-improved flak vest. Multi-layer composite plates and an ergonomic fit system substantially raise protection levels. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>12960</WorkToMake>
+      <MaxHitPoints>288</MaxHitPoints>
+      <Mass>2.6</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>1.44</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.52</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.39</ArmorRating_Heat>
+      <Insulation_Cold>1.4</Insulation_Cold>
+      <EquipDelay>3.2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Cloth>30</Cloth>
+      <Steel>86</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_FlakVest_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_FlakVest_Base">
+    <defName>RM1_FlakVest_III</defName>
+    <label>flak vest (Mark III)</label>
+    <description>The pinnacle of flak vest engineering. Advanced fabrication techniques produce a vest with near-spacer protection levels at manageable weight. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>15552</WorkToMake>
+      <MaxHitPoints>346</MaxHitPoints>
+      <Mass>2.1</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>1.73</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.62</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.47</ArmorRating_Heat>
+      <Insulation_Cold>1.7</Insulation_Cold>
+      <EquipDelay>2.6</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Cloth>30</Cloth>
+      <Steel>104</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_FlakVest_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <!-- ================================================================ -->
+  <!--  FLAK PANTS                                                       -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="ArmorMachineableBase" Name="RM1_FlakPants_Base" Abstract="True">
+    <defName>RM1_FlakPants_Base</defName>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/FlakPants/FlakPants</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>IndustrialMilitaryBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_FlakPants_Base">
+    <defName>RM1_FlakPants_I</defName>
+    <label>flak pants (Mark I)</label>
+    <description>Improved flak pants. Denser weave and better plate geometry increase protection without sacrificing mobility. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>10800</WorkToMake>
+      <MaxHitPoints>240</MaxHitPoints>
+      <Mass>3.2</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>0.66</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.12</ArmorRating_Heat>
+      <Insulation_Cold>4.2</Insulation_Cold>
+      <Insulation_Heat>1.2</Insulation_Heat>
+      <EquipDelay>4.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Cloth>30</Cloth>
+      <Steel>72</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_FlakPants_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_FlakPants_Base">
+    <defName>RM1_FlakPants_II</defName>
+    <label>flak pants (Mark II)</label>
+    <description>Further-improved flak pants. Overlapping composite panels and a revised articulation system substantially improve lower-body armour coverage. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>12960</WorkToMake>
+      <MaxHitPoints>288</MaxHitPoints>
+      <Mass>2.6</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>0.79</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.14</ArmorRating_Heat>
+      <Insulation_Cold>5.0</Insulation_Cold>
+      <Insulation_Heat>1.4</Insulation_Heat>
+      <EquipDelay>3.2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Cloth>30</Cloth>
+      <Steel>86</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_FlakPants_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_FlakPants_Base">
+    <defName>RM1_FlakPants_III</defName>
+    <label>flak pants (Mark III)</label>
+    <description>The pinnacle of flak pants engineering. Advanced fabrication yields pants whose composite plates rival early spacer-grade armour in protective capability. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>15552</WorkToMake>
+      <MaxHitPoints>346</MaxHitPoints>
+      <Mass>2.1</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.14</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.17</ArmorRating_Heat>
+      <Insulation_Cold>6.0</Insulation_Cold>
+      <Insulation_Heat>1.7</Insulation_Heat>
+      <EquipDelay>2.6</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Cloth>30</Cloth>
+      <Steel>104</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_FlakPants_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <!-- ================================================================ -->
+  <!--  RECON ARMOR                                                      -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="ArmorMachineableBase" Name="RM1_ReconArmor_Base" Abstract="True">
+    <defName>RM1_ReconArmor_Base</defName>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ReconArmor/ReconArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <tradeTags>
+      <li>HiTechArmor</li>
+      <li>Armor</li>
+    </tradeTags>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ReconArmor/ReconArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+    </apparel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_ReconArmor_Base">
+    <defName>RM1_ReconArmor_I</defName>
+    <label>recon armor (Mark I)</label>
+    <description>Improved recon armor. Refined plasteel-weave layering and upgraded neuro-memetic assistors push protection and mobility beyond baseline. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>54000</WorkToMake>
+      <MaxHitPoints>336</MaxHitPoints>
+      <Mass>7.2</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.10</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.48</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.55</ArmorRating_Heat>
+      <Insulation_Cold>77</Insulation_Cold>
+      <Insulation_Heat>11</Insulation_Heat>
+      <EquipDelay>9</EquipDelay>
+    </statBases>
+    <costList>
+      <Plasteel>96</Plasteel>
+      <Uranium>10</Uranium>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ReconArmor_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_ReconArmor_Base">
+    <defName>RM1_ReconArmor_II</defName>
+    <label>recon armor (Mark II)</label>
+    <description>Further-improved recon armor. Second-generation plasteel composite and tuned assistor servos deliver substantially enhanced protection and thermal resistance. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>64800</WorkToMake>
+      <MaxHitPoints>403</MaxHitPoints>
+      <Mass>5.8</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.32</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.58</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.66</ArmorRating_Heat>
+      <Insulation_Cold>92</Insulation_Cold>
+      <Insulation_Heat>13</Insulation_Heat>
+      <EquipDelay>7</EquipDelay>
+    </statBases>
+    <costList>
+      <Plasteel>115</Plasteel>
+      <Uranium>10</Uranium>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ReconArmor_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_ReconArmor_Base">
+    <defName>RM1_ReconArmor_III</defName>
+    <label>recon armor (Mark III)</label>
+    <description>The pinnacle of recon armor engineering. Advanced fabrication methods yield a suit whose protection approaches marine armor while retaining superior mobility. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>77760</WorkToMake>
+      <MaxHitPoints>484</MaxHitPoints>
+      <Mass>4.7</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.59</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.69</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.80</ArmorRating_Heat>
+      <Insulation_Cold>111</Insulation_Cold>
+      <Insulation_Heat>16</Insulation_Heat>
+      <EquipDelay>6</EquipDelay>
+    </statBases>
+    <costList>
+      <Plasteel>138</Plasteel>
+      <Uranium>10</Uranium>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ReconArmor_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!-- ================================================================ -->
+  <!--  RECON HELMET                                                     -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="ArmorHelmetMakeableBase" Name="RM1_ReconHelmet_Base" Abstract="True">
+    <defName>RM1_ReconHelmet_Base</defName>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ReconArmorHelmet/ReconHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <tradeTags>
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ReconArmorHelmet/ReconHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_ReconHelmet_Base">
+    <defName>RM1_ReconHelmet_I</defName>
+    <label>recon helmet (Mark I)</label>
+    <description>Improved recon helmet. Enhanced visor integration and thicker plasteel-weave plate increase combat effectiveness. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>18900</WorkToMake>
+      <MaxHitPoints>144</MaxHitPoints>
+      <Mass>0.8</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.10</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.48</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.55</ArmorRating_Heat>
+      <Insulation_Cold>5</Insulation_Cold>
+      <Insulation_Heat>2.4</Insulation_Heat>
+      <EquipDelay>1.6</EquipDelay>
+    </statBases>
+    <costList>
+      <Plasteel>36</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ReconHelmet_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_ReconHelmet_Base">
+    <defName>RM1_ReconHelmet_II</defName>
+    <label>recon helmet (Mark II)</label>
+    <description>Further-improved recon helmet. Second-generation composite shell and improved status computer hardware substantially raise head protection and environmental resistance. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>22680</WorkToMake>
+      <MaxHitPoints>173</MaxHitPoints>
+      <Mass>0.6</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.32</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.58</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.66</ArmorRating_Heat>
+      <Insulation_Cold>6</Insulation_Cold>
+      <Insulation_Heat>3</Insulation_Heat>
+      <EquipDelay>1.3</EquipDelay>
+    </statBases>
+    <costList>
+      <Plasteel>43</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ReconHelmet_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_ReconHelmet_Base">
+    <defName>RM1_ReconHelmet_III</defName>
+    <label>recon helmet (Mark III)</label>
+    <description>The pinnacle of recon helmet engineering. Advanced fabrication produces a helmet with exceptional ballistic protection and near-complete environmental sealing. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>27216</WorkToMake>
+      <MaxHitPoints>207</MaxHitPoints>
+      <Mass>0.5</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.59</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.69</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.80</ArmorRating_Heat>
+      <Insulation_Cold>7</Insulation_Cold>
+      <Insulation_Heat>3.5</Insulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+    <costList>
+      <Plasteel>52</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_ReconHelmet_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!-- ================================================================ -->
+  <!--  MARINE ARMOR                                                     -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="ArmorMachineableBase" Name="RM1_MarineArmor_Base" Abstract="True">
+    <defName>RM1_MarineArmor_Base</defName>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/PowerArmor/PowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <tradeTags>
+      <li>HiTechArmor</li>
+      <li>Armor</li>
+    </tradeTags>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PowerArmor/PowerArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+    </apparel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_MarineArmor_Base">
+    <defName>RM1_MarineArmor_I</defName>
+    <label>marine armor (Mark I)</label>
+    <description>Improved marine armor. Enhanced plasteel-weave plate density and upgraded neuro-memetic assistors push protection and durability beyond baseline. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>72000</WorkToMake>
+      <MaxHitPoints>408</MaxHitPoints>
+      <Mass>9.6</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.27</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.54</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.65</ArmorRating_Heat>
+      <Insulation_Cold>82</Insulation_Cold>
+      <Insulation_Heat>12</Insulation_Heat>
+      <EquipDelay>11</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Plasteel>120</Plasteel>
+      <Uranium>20</Uranium>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_MarineArmor_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_MarineArmor_Base">
+    <defName>RM1_MarineArmor_II</defName>
+    <label>marine armor (Mark II)</label>
+    <description>Further-improved marine armor. Second-generation composite weave and enhanced joint actuators significantly improve protection and thermal resistance. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>86400</WorkToMake>
+      <MaxHitPoints>490</MaxHitPoints>
+      <Mass>7.7</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.53</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.78</ArmorRating_Heat>
+      <Insulation_Cold>98</Insulation_Cold>
+      <Insulation_Heat>14</Insulation_Heat>
+      <EquipDelay>9</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Plasteel>144</Plasteel>
+      <Uranium>20</Uranium>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_MarineArmor_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>11</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_MarineArmor_Base">
+    <defName>RM1_MarineArmor_III</defName>
+    <label>marine armor (Mark III)</label>
+    <description>The pinnacle of marine armor engineering. Advanced fabrication yields a suit representing the absolute peak of powered combat armour technology. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>103680</WorkToMake>
+      <MaxHitPoints>588</MaxHitPoints>
+      <Mass>6.1</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.83</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.78</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.93</ArmorRating_Heat>
+      <Insulation_Cold>118</Insulation_Cold>
+      <Insulation_Heat>17</Insulation_Heat>
+      <EquipDelay>7</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Plasteel>173</Plasteel>
+      <Uranium>20</Uranium>
+      <ComponentSpacer>7</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_MarineArmor_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>13</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!-- ================================================================ -->
+  <!--  MARINE HELMET                                                    -->
+  <!-- ================================================================ -->
+  <ThingDef ParentName="ArmorHelmetMakeableBase" Name="RM1_MarineHelmet_Base" Abstract="True">
+    <defName>RM1_MarineHelmet_Base</defName>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/PowerArmorHelmet/PowerArmorHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeTags>
+      <li>HiTechArmor</li>
+      <li>Armor</li>
+    </tradeTags>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PowerArmorHelmet/PowerArmorHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <forceEyesVisibleForRotations>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </forceEyesVisibleForRotations>
+    </apparel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_MarineHelmet_Base">
+    <defName>RM1_MarineHelmet_I</defName>
+    <label>marine helmet (Mark I)</label>
+    <description>Improved marine helmet. Reinforced plasteel-weave layers and an updated status computer improve protection and utility. Tier 1 of 3.</description>
+    <statBases>
+      <WorkToMake>25200</WorkToMake>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Mass>1.2</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.27</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.54</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.65</ArmorRating_Heat>
+      <Insulation_Cold>5</Insulation_Cold>
+      <Insulation_Heat>2.4</Insulation_Heat>
+      <EquipDelay>3.2</EquipDelay>
+    </statBases>
+    <costList>
+      <Plasteel>48</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_MarineHelmet_I_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_MarineHelmet_Base">
+    <defName>RM1_MarineHelmet_II</defName>
+    <label>marine helmet (Mark II)</label>
+    <description>Further-improved marine helmet. Second-generation composite shell and integrated environmental sealing substantially raise protection and endurance. Tier 2 of 3.</description>
+    <statBases>
+      <WorkToMake>30240</WorkToMake>
+      <MaxHitPoints>216</MaxHitPoints>
+      <Mass>1.0</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.53</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.78</ArmorRating_Heat>
+      <Insulation_Cold>6</Insulation_Cold>
+      <Insulation_Heat>3</Insulation_Heat>
+      <EquipDelay>2.6</EquipDelay>
+    </statBases>
+    <costList>
+      <Plasteel>58</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_MarineHelmet_II_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>11</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="RM1_MarineHelmet_Base">
+    <defName>RM1_MarineHelmet_III</defName>
+    <label>marine helmet (Mark III)</label>
+    <description>The pinnacle of marine helmet engineering. Advanced fabrication produces a helmet offering extreme ballistic protection and near-hermetic environmental sealing. Tier 3 of 3.</description>
+    <statBases>
+      <WorkToMake>36288</WorkToMake>
+      <MaxHitPoints>259</MaxHitPoints>
+      <Mass>0.8</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.83</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.78</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.93</ArmorRating_Heat>
+      <Insulation_Cold>7</Insulation_Cold>
+      <Insulation_Heat>3.5</Insulation_Heat>
+      <EquipDelay>2.1</EquipDelay>
+    </statBases>
+    <costList>
+      <Plasteel>69</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>RM1_MarineHelmet_III_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>13</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+</Defs>

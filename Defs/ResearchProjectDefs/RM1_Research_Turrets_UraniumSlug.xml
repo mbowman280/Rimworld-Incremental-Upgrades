@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>RM1_UraniumSlug_T2_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>uranium slug turret upgrade I</label>
+    <description>Improved electromagnetic slug acceleration and targeting optics extend effective range.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SniperTurret</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>8.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_UraniumSlug_T6_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>uranium slug turret upgrade II</label>
+    <description>Industrial-peak engineering applied to the uranium slug platform.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>RM1_UraniumSlug_T2_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>9.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_UraniumSlug_T11_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>uranium slug turret upgrade III</label>
+    <description>The apex of kinetic energy weapons. A single shot carries enough force to halt any known threat.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_UraniumSlug_T6_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>10.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+  </ResearchProjectDef>
+</Defs>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>RM1_ShipReactor_T2_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>improved ship reactor</label>
+    <description>Refined plasma confinement geometry increases energy output and allows a more powerful launch burn.</description>
+    <baseCost>8000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>ShipReactor</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>12.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_ShipReactor_T4_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>spacer ship reactor</label>
+    <description>Exotic matter fuel rods and field-stabilized plasma channels achieve an energy yield that strains the limits of known physics.</description>
+    <baseCost>12000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_ShipReactor_T2_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>13.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RM1_ShipReactor_T6_Research</defName>
+    <tab>RM1_IncrementalUpgrades</tab>
+    <label>peak ship reactor</label>
+    <description>The ultimate expression of known reactor science. A controlled singularity reaction produces energy on a scale that borders on the incomprehensible.</description>
+    <baseCost>16000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>RM1_ShipReactor_T4_Research</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>14.0</researchViewX>
+    <researchViewY>0.0</researchViewY>
+  </ResearchProjectDef>
+</Defs>

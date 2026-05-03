@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- WorkGiverDef entries for each RM1 Ground-Penetrating Scanner upgrade tier.         -->
+  <!-- WorkGiver_OperateScanner looks up buildings by the exact scannerDef defName,       -->
+  <!-- so vanilla's GroundPenetratingScan/LongRangeScan defs don't see our upgrade defs.  -->
+  <!-- One entry per tier is required.                                                     -->
+
+  <WorkGiverDef>
+    <defName>RM1_GroundPenetratingScan_I</defName>
+    <giverClass>WorkGiver_OperateScanner</giverClass>
+    <workType>Research</workType>
+    <scannerDef>RM1_GroundScanner_I</scannerDef>
+    <priorityInType>90</priorityInType>
+    <verb>scan at</verb>
+    <gerund>scanning at</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>RM1_GroundPenetratingScan_II</defName>
+    <giverClass>WorkGiver_OperateScanner</giverClass>
+    <workType>Research</workType>
+    <scannerDef>RM1_GroundScanner_II</scannerDef>
+    <priorityInType>90</priorityInType>
+    <verb>scan at</verb>
+    <gerund>scanning at</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>RM1_GroundPenetratingScan_III</defName>
+    <giverClass>WorkGiver_OperateScanner</giverClass>
+    <workType>Research</workType>
+    <scannerDef>RM1_GroundScanner_III</scannerDef>
+    <priorityInType>90</priorityInType>
+    <verb>scan at</verb>
+    <gerund>scanning at</gerund>
+  </WorkGiverDef>
+
+  <!-- Long-Range Mineral Scanner upgrade tiers -->
+
+  <WorkGiverDef>
+    <defName>RM1_LongRangeScan_I</defName>
+    <giverClass>WorkGiver_OperateScanner</giverClass>
+    <workType>Research</workType>
+    <scannerDef>RM1_MineralScanner_I</scannerDef>
+    <priorityInType>90</priorityInType>
+    <verb>scan at</verb>
+    <gerund>scanning at</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>RM1_LongRangeScan_II</defName>
+    <giverClass>WorkGiver_OperateScanner</giverClass>
+    <workType>Research</workType>
+    <scannerDef>RM1_MineralScanner_II</scannerDef>
+    <priorityInType>90</priorityInType>
+    <verb>scan at</verb>
+    <gerund>scanning at</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>RM1_LongRangeScan_III</defName>
+    <giverClass>WorkGiver_OperateScanner</giverClass>
+    <workType>Research</workType>
+    <scannerDef>RM1_MineralScanner_III</scannerDef>
+    <priorityInType>90</priorityInType>
+    <verb>scan at</verb>
+    <gerund>scanning at</gerund>
+  </WorkGiverDef>
+
+</Defs>
